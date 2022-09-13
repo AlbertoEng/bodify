@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>-- Paola y Eduardo --</title>
+    <link rel="stylesheet" href="css/invitacion.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+</head>
+<body>
+    <div id="contenedor_mapa" class="contenedor_mapa">
+        <div id="map">
+            <button id="button_salir_map">
+                Salir
+            </button>
+        </div>
+    </div>
+    <div class="containerPpal">
+        <header class="banner">
+            <div class="divBanner">
+                <img class="imgHeader" src="/paolayeduardo/img/Desktop/imagenes/paolayeduardo1.jpeg" alt="" srcset="">
+            </div>
+            <div class="caja-encima">
+                <div class="containerLogo">
+                    <img id="logo" src="img/Desktop/iconos-Ornamentos/PNG/logo.png" alt="" srcset="">
+                </div>
+                
+                <div class="containerTitulo">
+                    <p class="titulo">Paola y Eduardo</p>
+                    <div class="imgSubitulo">
+                        <img src="img/Desktop/iconos-Ornamentos/PNG/Subtitulo.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="containerCajas">
+            <div class="caja1"></div>
+            <div class="caja2">
+                <div class="capsulaContainerTop">
+                    <div class="capsula_top">¡Nos Casamos!</div>
+                    <div class="capsula_bottom">Hoy se hace realidad uno de vuestros deseos. Esperamos que en vuestra vida en común que comienza con este enlace se haga realidad todo lo que soñáis. ¡Felicidades, pareja!</div>
+                </div>
+                <div class="capsulaContainerBottom">
+                    <img class="imagenCapsula" src="/paolayeduardo/img/Desktop/imagenes/paolayeduardo3.jpeg" alt="" srcset="">
+                </div>
+            </div>
+            <div class="caja3"></div>
+        </div>
+        <p class="fecha_boda_texto">SAVE THE DATE</p>
+        <div class="cuadro_borde_abajo">
+            <div></div>
+        </div>
+        <p class="fecha">30 de Diciembre de 2022</p>
+        <div class="banda_cafe">
+            <div id="dias_restantes" class="cuadros_fecha">--<span>DIAS</span> </div>
+            <div id="horas_restantes" class="cuadros_fecha">--<span>HORAS</span> </div>
+            <div id="minutos_restantes" class="cuadros_fecha">--<span>MINUTOS</span> </div>
+            <div id="segundos_restantes"  class="cuadros_fecha">--<span>SEGUNDOS</span> </div>
+        </div>
+        <div class="relleno">
+            <div class="caja_1"></div>
+            <div class="caja_2"></div>
+        </div>
+        <div class="container_capsula2">
+            <div class="fondo-left-box">
+                <div class="left-box">
+                    <div>
+                        <p id="aventura1">¡Nuestra aventura</p>
+                        <p id="aventura2">apenas comienza¡</p>
+                    </div>
+                </div>
+            </div>
+            <div class="fondo-right-box">
+                <div class="right-box">
+                    <div>
+                        <img id="img_anillos" src="img/Desktop/Imagenes/Rectangle14.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="relleno">
+            <div class="caja_1"></div>
+            <div class="caja_2"></div>
+        </div>
+        <div class="mapContainer">
+            <div id="mapa" class="mapa">
+                <img src="img/Desktop/Imagenes/templo.jpeg" alt="">
+                <div class="capa_oscura">
+                    <div class="caja_hora">
+                        <p>19:20</p>
+                    </div>
+                    <div class="caja_datos">
+                        <h3>CEREMONIA</h3>
+                        <p>Templo Sagrado Corazón de Jesus</p>
+                        <p>Palma Kerpis 103-Interior Sn, 28219 Manzanillo, Colima</p>
+                        <p>Manzanillo,Col.</p>
+                    </div>
+                    <p id="abrir_mapa_ceremonia" class="ver-mapa">Ver Mapa</p>
+                </div>
+            </div>
+            <div id="mapa" class="mapa">
+                <img src="img/Desktop/Imagenes/recepcion.jpeg" alt="">
+                <div class="capa_oscura">
+                    <div class="caja_hora">
+                        <p>21:30</p>
+                    </div>
+                    <div class="caja_datos">
+                        <h3>RECEPCIÓN</h3>
+                        <p>Hacienda San Nicolas</p>
+                        <p>Carretera a Chandiablo, desviacion izquierda camino a petardo No 29.</p>
+                        <p>Manzanillo,Col.</p>
+                    </div>
+                    <p id="abrir_mapa_recepcion" class="ver-mapa">Ver Mapa</p>
+                </div>
+                
+            </div>
+        </div>
+        <h3 class="itinerario-titulo">
+            Itinerario
+        </h3>
+        <div class="ornamento-itinerio">
+            <img src="img/Phone/Iconos-Ornamentos/SVG/ornamento.svg" alt="">
+        </div>
+        <div class="etapas-container">
+            <div class="etapa-itinerario">
+                <div>
+                    <img src="img/Desktop/Iconos-Ornamentos/PNG/Capa 2.png" alt="">
+                </div>
+                <p class="titulo-etapa">RECEPCIÓN</p>
+                <p class="horario-etapa">9:30 - 11:00 PM</p>
+                <p class="descripcion-etapa">Comparte con nosotros este momento</p>
+            </div>
+            <div class="etapa-itinerario">
+                <div>
+                    <img src="img/Desktop/Iconos-Ornamentos/PNG/Capa 2-1.png" alt="">
+                </div>
+                <p class="titulo-etapa">CENA</p>
+                <p class="horario-etapa">10:00 - 11:00 PM</p>
+                <p class="descripcion-etapa">Cenar juntos hace esta noche especial</p>
+            </div>
+            <div class="etapa-itinerario">
+                <div>
+                    <img src="img/Desktop/Iconos-Ornamentos/PNG/Capa 1.png" alt="">
+                </div>
+                <p class="titulo-etapa">FIESTA</p>
+                <p class="horario-etapa">11:00 PM - 03:00 AM</p>
+                <p class="descripcion-etapa">¡Hey! comienza <span style="display: block;">la diversion</span> </p>
+            </div>
+            <div class="etapa-itinerario">
+                <div>
+                    <img src="img/Desktop/Iconos-Ornamentos/PNG/Capa 2-2.png" alt="">
+                </div>
+                <p class="titulo-etapa">TRASNOCHADO</p>
+                <p class="horario-etapa">03:00 - 06:00 AM</p>
+                <p class="descripcion-etapa">¡Hey! comienza <span style="display: block;">la diversion</span></p>
+            </div>
+        </div>
+        <div class="video">  
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=oiGCL2Ld534" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="mesa-regalos">
+            <h2 class="titulo-mesa-ragalos">MESA DE REGALOS</h2>
+            <div class="borde_abajo_mesa_regalos">
+                <div></div>
+            </div>
+            <div class="tiendas-container">
+                <div class="tiendas">
+                    <p class="tienda">liverpool</p>
+                    <p class="codigo-evento">EVENTO NO. 50319014</p>
+                </div>
+                <div class="tiendas">
+                    <p class="tienda">sears</p>
+                    <p class="codigo-evento">EVENTO NO. 24308275</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="container-final">
+            <div  class="imgFinal">
+                <img src="/paolayeduardo/img/Desktop/imagenes/paolayeduardo1.jpeg" alt="">
+            </div>
+            <div class="container-form">
+                <div class="texto-confirmanos">
+                    <div>
+                        <img id="ornamento-form" src="img/Desktop/Iconos-Ornamentos/PNG/Ornamento.png" alt="">
+                    </div>
+                    <h2>Confirmanos</h2>
+                    <h2>tu asistencia</h2>
+                </div>
+                <form id="formulario" class="form-invitados" action="/paolayeduardo/confirmacion" method="POST">
+                    <div class="contenedor-form">
+                        <p class="nombre-invitado">Miguel Angel Ramirez Rodriguez</p>
+                        <input class="checkbox-confirmar" type="checkbox" name="jesus">
+                    </div>
+                    <div class="contenedor-form">
+                        <p class="nombre-invitado">Maria Antonieta Gomez Velazquez</p>
+                        <input class="checkbox-confirmar" type="checkbox" name="romina">
+                    </div>
+                    <div class="contenedor-form">
+                        <p class="nombre-invitado">Mario Ramirez Gomez</p>
+                        <input class="checkbox-confirmar" type="checkbox" name="lucca">
+                    </div>
+                    <div class="container-button">
+                        <input class="boton" type="submit" value="Confirmo Asistencia">
+                    </div>
+                
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div class="container-footer">
+                <p class="texto_footer">Paola</p>
+                <img class="logo_footer" src="img/Desktop/iconos-Ornamentos/PNG/logo.png" alt="">
+                <p class="texto_footer">Eduardo</p>
+            </div>
+            <div class="bodify">
+                <p>Creado por Bodify</p>
+            </div>
+        </footer>
+    </div>
+    <script src="js/index.js"></script>
+
+</body>
+</html>
