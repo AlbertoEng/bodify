@@ -5,6 +5,15 @@
     --naranja: #CC7153;
     --letras_verdes: #006A6A;
     --negro_oscuro: #232323;
+
+
+
+    --cafe1: hsl(23, 100%, 79%);
+    --cafe2: hsl(23, 85%, 60%);
+    --cafe3: hsl(23, 75%, 50%);
+    --cafe4: hsl(23, 70%, 40%);
+    --cafe5: hsl(23, 70%, 35%);
+    
 }
 
 *{
@@ -182,12 +191,12 @@ body{
 .caja1{
     width: 100%;
     height: 500px;
-    background-color: #FBE3D1;
+    background-color: var(--cafe2);
     margin: 0px;
 }
 
 .caja2{
-    width: 800px;
+    width: 700px;
     height: 1200px;
     background-color: rgb(255, 255, 255);
     position: absolute;
@@ -195,7 +204,7 @@ body{
     left: 0;
     margin-right: auto;
     margin-left: auto;
-    top: -90px;
+    top: -100px;
     border-radius: 400px;
     display: flex;
     flex-direction: column;
@@ -209,9 +218,9 @@ body{
 }
 
 .capsula_top{
-    font-size: 50px;
+    font-size: 70px;
     color: #006A6A;
-    padding: 150px 100px 0px;
+    
     text-align: center;
     overflow: hidden;
     font-weight: bold;
@@ -219,22 +228,35 @@ body{
 }
 
 .capsula_bottom{
-    padding: 50px 150px 155px;
-    font-size: 30px;
+    font-size: 100px;
     text-align: justify;
     font-family: fontNunitoRegular;
+    text-align: center;
+    font-weight: bolder;
+    padding-top: 15px;
+}
+
+.mensaje{
+    font-size: 40px;
+    color: #232323;
+    font-weight: bold;
 }
 .capsulaContainerTop{
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 100px;
+    height: 600px;
 }
 
 
 .capsulaContainerBottom{
-    flex: 1;
+
     border-bottom-left-radius: 400px;
     border-bottom-right-radius: 400px;
     overflow: hidden;
-
+    height: 600px;
 
 }
 
@@ -278,7 +300,7 @@ body{
 .banda_cafe{
     width: 100%;
     height: 200px;
-    background-color: var(--banda_cafe);
+    background-color: var(--cafe4);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -313,9 +335,8 @@ body{
 
 }
 .fondo-left-box{
-    background-color: var(--rosita);
     width: 50%;
-    background-color: var(--rosa_fuerte);
+    background-color: var(--cafe3);
     padding-left: 10%;
 }
 .fondo-right-box{
@@ -325,11 +346,11 @@ body{
 }
 
 #aventura1{
-    font-size: 60px;
+    font-size: 50px;
     font-family: fontBodaBold;
 }
 #aventura2{
-    font-size: 60px;
+    font-size: 50px;
     font-family: fontBodaBold;
 }
 
@@ -373,8 +394,7 @@ body{
     width: 100%;
     height: 100%;
     flex: 1;
-    background-color: var(--rosita);
-    background-color: var(--rosa_fuerte);
+    background-color: var(--cafe3);
 }
 .caja_2{
     flex: 1;
@@ -412,7 +432,7 @@ body{
 .ver-mapa{
     position: absolute;
     width:200px;
-    background-color: var(--rosa_fuerte);
+    background-color: var(--cafe1);
     color: var(--letras_verdes);
     font-weight: bold;
     text-align: center;
@@ -423,8 +443,8 @@ body{
     border-top-left-radius: 10px;
 }
 .ver-mapa:hover{
-    background-color: var(--naranja);
-    color: var(--rosa_fuerte);
+    background-color: var(--cafe3);
+    color: whitesmoke;
 }
 
 
@@ -444,6 +464,7 @@ body{
     align-items: center;
     font-weight: bold;
     font-size: 20px;
+    z-index: 20;
     
 }
 
@@ -476,7 +497,7 @@ body{
     position: absolute;
     bottom: 0px;
     padding: 50px 50px;
-    background: linear-gradient( to top, rgba(0, 0, 0.4),rgba(0,0,0,0.2));
+    background: linear-gradient( to top, rgba(0, 0, 0.3),rgba(0,0,0,0.1),rgba(0,0,0,0.0));
     width: 100%;
     height: 100%;
     display: flex;
@@ -559,13 +580,13 @@ body{
 .mesa-regalos{
     height: 400px;
     padding-top: 40px;
-    background-color: var(--rosa_fuerte);
+    background-color: var(--cafe2);
 }
 .titulo-mesa-ragalos{
     font-size: 30px;
     text-align: center;
     font-family: fontNunitoRegular;
-    color: var(--banda_cafe);
+    color: #232323;
 }
 .borde_abajo_mesa_regalos div{
     width: 50px;
@@ -584,11 +605,15 @@ body{
     font-size: 80px;
     font-family: fontBodaExtraLight;
     text-align: center;
+    color: #006A6A;
+    font-weight: bolder;
 }
 .codigo-evento{
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     font-family: fontNunitoBold;
+    color: #232323;
+    font-weight: bolder;
 }
 
 .container-final{
@@ -649,8 +674,9 @@ body{
     align-items: center;
 }
 .nombre-invitado{
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
+    color: var(--negro_oscuro);
 }
 .checkbox-confirmar{
     width: 40px;
@@ -658,7 +684,7 @@ body{
     margin: 0 auto;
 }
 .container-button{
-    margin-top: 50px;
+    margin: 50px;
     display: flex;
     justify-content: center;
     align-items: center;    
@@ -727,43 +753,61 @@ footer{
     .banner{
         height: auto;
     }
+    .divBanner{
+        height: 100%;
+    }
+    .imgHeader{
+        height: 100%;
+    }
     #logo{
         width: 250px;
     }
     .titulo{
         font-size: 8px;
     }
+    
     .caja2{
-        width: 80%;         
+        width: 550px; 
+        height: 1100px;
+        border-radius: 485px;
+        top: -98px;
     }
     .caja3{
-        height: 800px;
+        height: 600px;
     }
     .capsula_top{
-        padding: 100px 70px 10px;
+        font-size: 50px;
     }
     .capsula_bottom{
-        padding: 80px 100px;
-        font-size: 25px;
+        font-size: 50px;
+        padding: 30px
     }
-    
+    .mensaje{
+        font-size: 40px;
+    }
     .fondo-left-box{
-        padding: 0px;
+        padding-left: 20px;
     }
     .fondo-right-box{
-        padding: 0px;
+        padding-right: 20px;
     }
     #aventura1{
-        font-size: 35px;
+        font-size: 30px;
     }
     #aventura2{
-        font-size: 35px;
+        font-size: 30px;
+    }
+    .capsulaContainerTop{
+        padding: 0px;
+        height: 500px;
     }
     .capsulaContainerBottom{
-        flex:1;
+        height: 500px;
+
     }
+    
     .imagenCapsula{
-        height: 100%;
+        height: 100%
     }
     .container-form{
         width: 100%;
@@ -837,8 +881,18 @@ footer{
         justify-content: center;
         align-items: center;
     }
-    
-
+    .container_capsula2{
+        
+    }
+    .left-box{
+        height: 150px;
+    }
+    .right-box{
+        height: 150px;
+    }
+    #img_anillos{
+        height: 150px;
+    }
     #map{
         width: 95%;
         height: 80%;
@@ -864,13 +918,16 @@ footer{
         visibility: hidden;
     }
     .imgFinal{
-        background-color: var(--rosa_fuerte);
+        background-color: var(--cafe2);
     }
 
     .frame-video{
         height: 500px;
     }
-
+    .nombre-invitado{
+        font-size: 25px;
+        text-align: center;
+    }
 }
 
 
@@ -903,7 +960,7 @@ footer{
     .ver-mapa{
         width: auto;
         padding: 5px;
-        color: var(--rosita);
+        color: var(--cafe1);
         background-color: transparent;
     }
     .ver-mapa:hover{
@@ -912,10 +969,13 @@ footer{
     .caja_datos{
         padding: 20px;
     }
+    .caja1{
+        height: 460px;
+    }
     .caja2{
         width: 95%; 
         height: auto;
-        top: -30px;
+        top: -40px;
         display: block;
     }
     .caja3{
@@ -935,9 +995,6 @@ footer{
         padding: 70px 0px 20px;
   
     }
-    .container_capsula2{
-        
-    }
     .left-box{
         height: 150px;
     }
@@ -952,6 +1009,9 @@ footer{
         font-family: fontNunitoRegular;
         
     }   
+    .cuadros_fecha{
+        font-size: 80px;
+    }
     .capsulaContainerTop{
         height: 500px
     }
@@ -1041,4 +1101,9 @@ footer{
         color: var(--rosita);
         font-size: 10px;
     }
+    .nombre-invitado{
+        font-size: 25px;
+        text-align: center;
+    }
+    
 }

@@ -62,7 +62,7 @@
 
     setInterval(()=>{
         let fechaActual = new Date();
-        let fechaBoda = new Date(2022,11,19,10,30,00,00);
+        let fechaBoda = new Date(2022,10,19,17,30,00,00);
         let duration = moment.duration(fechaBoda - fechaActual);
         let tiempoRestante = fechaBoda - fechaActual;
         let segRestantes = Math.floor(tiempoRestante/1000);
