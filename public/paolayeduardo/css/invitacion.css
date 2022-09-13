@@ -786,10 +786,10 @@ footer{
         font-size: 40px;
     }
     .fondo-left-box{
-        padding-left: 20px;
+        padding-left: 0px;
     }
     .fondo-right-box{
-        padding-right: 20px;
+        padding-right: 0px;
     }
     #aventura1{
         font-size: 30px;
