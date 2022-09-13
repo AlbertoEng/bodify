@@ -705,6 +705,11 @@ footer{
 }
 
 
+.frame-video{
+    width: 100%;
+    height: 800px;
+}
+
 
 /*
 #####################################################
@@ -855,6 +860,10 @@ footer{
     }
     .imgFinal{
         background-color: var(--rosa_fuerte);
+    }
+
+    .frame-video{
+        height: 500px;
     }
 
 }
