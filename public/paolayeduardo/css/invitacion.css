@@ -8,11 +8,12 @@
 
 
 
-    --cafe1: hsl(24, 54%, 40%);
-    --cafe2: hsl(24, 50%, 45%);
-    --cafe3: hsl(24, 65%, 42%);
-    --cafe4: hsl(24, 61%, 32%);
-    --cafe5: hsl(24, 72%, 18%);
+    --cafe1: #f5cfa4;
+    --cafe2: #ffeedb;
+    --cafe3: #e6ba86;
+    --cafe4: #ffe0bf;
+    --cafe5: #f2dfcc;
+    --letras: #362d1c;
     
 }
 
@@ -191,14 +192,14 @@ body{
 .caja1{
     width: 100%;
     height: 500px;
-    background-color: var(--cafe2);
+    background-color: var(--cafe1);
     margin: 0px;
 }
 
 .caja2{
     width: 700px;
     height: 1200px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--cafe2);
     position: absolute;
     right: 0;
     left: 0;
@@ -219,7 +220,7 @@ body{
 
 .capsula_top{
     font-size: 70px;
-    color: #006A6A;
+    color: var(--letras);
     
     text-align: center;
     overflow: hidden;
@@ -269,9 +270,10 @@ body{
     font-family: fontNunitoRegular;
     font-size: 30px;
     background-color: var(--rosita);
-    color: #006A6A;
+    color: var(--letras);
     text-align: center;
     margin: 0px;
+    font-weight: bold;
 }
 
 .cuadro_borde_abajo{
@@ -295,12 +297,13 @@ body{
    text-align: center;
    background-color: var(--rosita);
    padding-bottom: 60px;
+   color: var(--letras);
 }
 
 .banda_cafe{
     width: 100%;
     height: 200px;
-    background-color: var(--cafe4);
+    background-color: var(--banda_cafe);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -331,27 +334,30 @@ body{
 .container_capsula2{
     display: flex;
     width: 100%;
-    background-color: var(--rosita);
 
 }
 .fondo-left-box{
     width: 50%;
-    background-color: var(--cafe3);
+    background-color: var(--cafe1);
     padding-left: 10%;
 }
 .fondo-right-box{
     width: 50%;
-    background-color: var(--rosita);
+    background-color: var(--cafe2);
     padding-right: 10%;
 }
 
 #aventura1{
     font-size: 50px;
     font-family: fontBodaBold;
+    color: var(--banda_cafe);
+    font-weight: bold;
 }
 #aventura2{
     font-size: 50px;
     font-family: fontBodaBold;
+    color: var(--banda_cafe);
+    font-weight: bold;
 }
 
 .left-box{
@@ -394,11 +400,11 @@ body{
     width: 100%;
     height: 100%;
     flex: 1;
-    background-color: var(--cafe3);
+    background-color: var(--cafe1);
 }
 .caja_2{
     flex: 1;
-    background-color: var(--rosita);
+    background-color: var(--cafe2);
 }
 
 .mapContainer{
@@ -432,8 +438,8 @@ body{
 .ver-mapa{
     position: absolute;
     width:200px;
-    background-color: var(--cafe1);
-    color: white;
+    background-color: var(--cafe3);
+    color: var(--letras);
     font-weight: bold;
     text-align: center;
     font-size: 20px;
@@ -443,22 +449,22 @@ body{
     border-top-left-radius: 10px;
 }
 .ver-mapa:hover{
-    background-color: var(--cafe4);
-    color: whitesmoke;
+    background-color: var(--cafe1);
+    color: var(--letras);
 }
 
 
 
 .caja_hora{
     width: 120px;
-    background-color: var(--rosita);
+    background-color: var(--cafe5);
     position: absolute;
     top: 50px;
     height: 50px;
     right: 0px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    color: var(--naranja);
+    color: var(--banda_cafe);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -510,7 +516,7 @@ body{
     margin-top: 30px;
     font-family: fontBodaBold;
     font-size: 60px;
-    color: var(--letras_verdes);
+    color: var(--letras);
 }
 .ornamento-itinerio{
     display: flex;
@@ -550,11 +556,12 @@ body{
     text-align: center;
     font-size: 20px;
     margin: 15px 30px;
-    color: var(--letras_verdes);
+    color: var(--letras);
+    font-weight: bold;
 }
 .horario-etapa{
     text-align: center;
-    color: var(--letras_verdes);
+    color: var(--letras);
     font-size: 15px;
 }
 .descripcion-etapa{
@@ -580,13 +587,13 @@ body{
 .mesa-regalos{
     height: 400px;
     padding-top: 40px;
-    background-color: var(--cafe2);
+    background-color: var(--cafe4);
 }
 .titulo-mesa-ragalos{
     font-size: 30px;
     text-align: center;
     font-family: fontNunitoRegular;
-    color: #d8d8d8;
+    color: var(--letras);
 }
 .borde_abajo_mesa_regalos div{
     width: 50px;
@@ -632,7 +639,7 @@ body{
     width: 1000px;
     height: 1100px;
     bottom: 0px;
-    background-color: var(--rosita);
+    background-color: var(--cafe2);
     z-index: 2;
     left: 0;
     right: 0;
@@ -657,7 +664,7 @@ body{
 
 .form-invitados{
     font-family: fontNunitoBold;
-    background-color: rgb(238, 238, 238);
+    background-color: var(--cafe1);
     width: 95%;
     margin: 0 auto;
     padding: 20px;
@@ -676,7 +683,7 @@ body{
 .nombre-invitado{
     font-size: 40px;
     text-align: center;
-    color: var(--negro_oscuro);
+    color: var(--letras);
 }
 .checkbox-confirmar{
     width: 40px;
@@ -692,13 +699,19 @@ body{
 
 .boton{
     width: 300px;
-    background-color: var(--letras_verdes);
-    color: var(--rosita);
+    background-color: var(--cafe2);
+    color: var(--letras);
     border: none;
     font-family: fontNunitoRegular;
     font-size: 30px;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px gray;
+}
+
+.boton:hover{
+    background-color: var(--cafe3);
+    cursor: pointer;
 }
 
 footer{
@@ -741,7 +754,18 @@ footer{
     box-shadow: 0px 0px 30px black;
 }
 
+.imgsobreContainer{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.imagenSobre{
+    width: 150px;
+}
 
+.tituloForm{
+    color: var(--letras);
+}
 /*
 #####################################################
 #####################################################
@@ -905,7 +929,6 @@ footer{
         width: 100px;
         height: 30px;
         z-index: 11;
-        background-color: red;
         margin: 10px;
         border-radius: 10px;
         color: white;
@@ -917,7 +940,7 @@ footer{
         visibility: hidden;
     }
     .imgFinal{
-        background-color: var(--cafe2);
+        background-color: var(--cafe4);
     }
 
     .frame-video{
@@ -983,7 +1006,7 @@ footer{
         height: 500px;
     }
     .fecha{
-        font-size: 40px;
+        font-size: 35px;
     }
     .fondo-left-box{
         height: 150px;
@@ -1024,7 +1047,6 @@ footer{
     }
     .imagenCapsula{
 
-        background-color: red;
     }
     #aventura1{
         font-size: 20px;
