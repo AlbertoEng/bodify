@@ -1,6 +1,7 @@
 import express from 'express';
 import path from 'path';
 import {router} from './routes/paolayeduardo.js'
+import {routerAdmin} from './routes/adminIvitados.js'
 
 const app = express();
 
@@ -18,9 +19,7 @@ app.get('/', (req, res)=>{
     res.send('<h1>Aplicacion de Invitaciones de Bodas</h1>')
 })
 
-app.get('/api/admin',(req, res)=>{
-    res.send('<h1>Panel de Administracion de Fiesta</h1>')
-})
+app.use('/admin/:id', routerAdmin)
 
 
 app.use((req,res,next)=>{

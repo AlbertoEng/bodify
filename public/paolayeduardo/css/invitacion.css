@@ -264,7 +264,6 @@ body{
 .imagenCapsula{
     width: 100%;
     height: 100%;
-    offset-position: -10px;
 }
 
 .fecha_boda_texto{
@@ -411,7 +410,7 @@ body{
 
 .mapContainer{
     width: 100%;
-    height: 600px;
+    height: 800px;
     margin-top: 150px;
     display: flex;
     justify-content: space-evenly;
@@ -420,7 +419,7 @@ body{
 }
 .mapa {
     width: 45%;
-    height: 500px;
+    height: 700px;
     border-radius: 10px;
     box-shadow: 0px 3px 10px gray;
     position: relative;
@@ -504,7 +503,7 @@ body{
 .caja_datos{
     position: absolute;
     bottom: 0px;
-    padding: 50px 50px;
+    padding: 50px 20px;
     background: linear-gradient( to top, rgba(0, 0, 0.3),rgba(0,0,0,0.1),rgba(0,0,0,0.0));
     width: 100%;
     height: 100%;
@@ -849,7 +848,7 @@ footer{
         flex-wrap: wrap;
     }
     .mapContainer{
-        display: flex;
+        
         flex-direction: column;
     }
     .mapa{
@@ -987,6 +986,7 @@ footer{
     .mapa{
         display: block;
         width: 95%;
+        height: 500px;
     }
 
     .ver-mapa{
