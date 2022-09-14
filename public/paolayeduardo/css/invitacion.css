@@ -197,7 +197,7 @@ body{
 }
 
 .caja2{
-    width: 700px;
+    width: 750px;
     height: 1200px;
     background-color: var(--cafe2);
     position: absolute;
@@ -264,6 +264,7 @@ body{
 .imagenCapsula{
     width: 100%;
     height: 100%;
+    offset-position: -10px;
 }
 
 .fecha_boda_texto{
@@ -283,11 +284,12 @@ body{
     
 }
 
+
 .cuadro_borde_abajo div {
     width: 70px;
     height: 30px;
     background-color: var(--rosita);
-    border-bottom: 2px solid #006A6A;
+    border-bottom: 2px solid var(--banda_cafe);
     margin: 0 auto;
 }
 
@@ -715,7 +717,7 @@ body{
 }
 
 footer{
-    background-color: var(--negro_oscuro);
+    background-color: var(--banda_cafe);
 }
 .logo_footer{
     width: 20%;
@@ -732,16 +734,22 @@ footer{
     justify-content: center;
     align-items: center;
     padding-top: 30px;
+
 }
 
 .bodify{
     display: flex;
     justify-content: flex-end;
-    color: var(--rosita);
+    
     padding: 10px;
     font-family: fontNunitoRegular;
     margin-right: 20px;
 }
+
+.textoBodify{
+    color: var(--rosa_fuerte);
+}
+
 
 
 .frame-video{
