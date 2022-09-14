@@ -8,11 +8,11 @@
 
 
 
-    --cafe1: hsl(23, 100%, 79%);
-    --cafe2: hsl(23, 85%, 60%);
-    --cafe3: hsl(23, 75%, 50%);
-    --cafe4: hsl(23, 70%, 40%);
-    --cafe5: hsl(23, 70%, 35%);
+    --cafe1: hsl(24, 54%, 40%);
+    --cafe2: hsl(24, 50%, 45%);
+    --cafe3: hsl(24, 65%, 42%);
+    --cafe4: hsl(24, 61%, 32%);
+    --cafe5: hsl(24, 72%, 18%);
     
 }
 
@@ -213,7 +213,7 @@ body{
 
 .caja3{
     width: 100%;
-    height: 1000px;
+    height: 800px;
     background-color: #FBF8F3;
 }
 
@@ -291,7 +291,7 @@ body{
 
 .fecha{
    font-family: fontBodaBold; 
-   font-size: 60px;
+   font-size: 80px;
    text-align: center;
    background-color: var(--rosita);
    padding-bottom: 60px;
@@ -433,7 +433,7 @@ body{
     position: absolute;
     width:200px;
     background-color: var(--cafe1);
-    color: var(--letras_verdes);
+    color: white;
     font-weight: bold;
     text-align: center;
     font-size: 20px;
@@ -443,7 +443,7 @@ body{
     border-top-left-radius: 10px;
 }
 .ver-mapa:hover{
-    background-color: var(--cafe3);
+    background-color: var(--cafe4);
     color: whitesmoke;
 }
 
@@ -586,7 +586,7 @@ body{
     font-size: 30px;
     text-align: center;
     font-family: fontNunitoRegular;
-    color: #232323;
+    color: #d8d8d8;
 }
 .borde_abajo_mesa_regalos div{
     width: 50px;
@@ -609,10 +609,10 @@ body{
     font-weight: bolder;
 }
 .codigo-evento{
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
     font-family: fontNunitoBold;
-    color: #232323;
+    color: #cdcdcd;
     font-weight: bolder;
 }
 
@@ -765,7 +765,6 @@ footer{
     .titulo{
         font-size: 8px;
     }
-    
     .caja2{
         width: 550px; 
         height: 1100px;
@@ -835,7 +834,7 @@ footer{
     }
 
     .fecha{
-        font-size: 50px;
+        font-size: 55px;
     }
 
     .video{
@@ -951,7 +950,9 @@ footer{
     #logo{
         width: 150px;
     }
-    
+    .mensaje{
+        font-size: 30px;
+    }
     .mapa{
         display: block;
         width: 95%;
@@ -979,10 +980,10 @@ footer{
         display: block;
     }
     .caja3{
-        height: 400px;
+        height: 500px;
     }
     .fecha{
-        font-size: 30px;
+        font-size: 40px;
     }
     .fondo-left-box{
         height: 150px;
