@@ -14,7 +14,7 @@ app.use( express.static(path.resolve('public')));
 app.use(express.urlencoded({extended: false}));
 
 // conectando a la base de datos
-await conectar();
+// await conectar();
 
 
 
