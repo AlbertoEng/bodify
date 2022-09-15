@@ -517,7 +517,7 @@ body{
     margin-top: 30px;
     font-family: fontBodaBold;
     font-size: 60px;
-    color: var(--letras);
+    color: var(--banda_cafe);
 }
 .ornamento-itinerio{
     display: flex;
@@ -534,10 +534,12 @@ body{
     justify-content: center;
     gap: 40px;
     font-family: fontNunitoRegular;
+
 }
 
 .etapa-itinerario{
     width: 200px;
+    color: var(--letras);
 }
 
 .etapa-itinerario div{
@@ -557,7 +559,7 @@ body{
     text-align: center;
     font-size: 20px;
     margin: 15px 30px;
-    color: var(--letras);
+    color: var(--banda_cafe);
     font-weight: bold;
 }
 .horario-etapa{
@@ -673,7 +675,7 @@ body{
     border-radius: 20px;
 }
 .contenedor-form{
-    margin-top: 20px;
+    margin-top: 5px;
     display: grid;
     grid-template-columns: 4fr 1fr;
     column-gap: 10px;
@@ -692,7 +694,7 @@ body{
     margin: 0 auto;
 }
 .container-button{
-    margin: 50px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;    
