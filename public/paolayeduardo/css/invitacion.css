@@ -724,7 +724,7 @@ footer{
 .texto_footer{
     font-family: fontBodaBold;
     font-size: 50px;
-    color: var(--rosa_fuerte);
+    color: var(--rosita);
 }
 
 .container-footer{
@@ -911,9 +911,7 @@ footer{
         justify-content: center;
         align-items: center;
     }
-    .container_capsula2{
-        
-    }
+
     .left-box{
         height: 150px;
     }
@@ -1053,9 +1051,6 @@ footer{
     .containerCajas{
         width: 100%;
     }
-    .imagenCapsula{
-
-    }
     #aventura1{
         font-size: 20px;
         font-family: fontBodaBold;
@@ -1124,7 +1119,7 @@ footer{
     .texto_footer{
         font-family: fontBodaBold;
         font-size: 30px;
-        color: var(--rosa_fuerte);
+        color: var(--rosita);
     }
     .bodify{
         display: flex;
