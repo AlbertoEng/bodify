@@ -3,7 +3,8 @@ import path from 'path';
 import {router} from './routes/paolayeduardo.js'
 import {routerAdmin} from './routes/adminIvitados.js'
 import {routerAuth} from './routes/auth.js'
-// import { conectar } from './DB/conexion.js';
+import { conectarDB } from './DB/conexion.js';
+
 
 const app = express();
 
@@ -14,7 +15,7 @@ app.use( express.static(path.resolve('public')));
 app.use(express.urlencoded({extended: false}));
 
 // conectando a la base de datos
-// await conectar();
+conectarDB();
 
 
 
