@@ -1,4 +1,5 @@
-import { DataTypes, Sequelize, UUID} from 'sequelize';
+import { DataTypes, UUID} from 'sequelize';
+import { sequelize } from '../DB/conexion.js'
 
 const Invitado = sequelize.define("invitados", {
   id: {

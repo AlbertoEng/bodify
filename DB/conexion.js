@@ -1,15 +1,18 @@
 import { Sequelize, UUID} from 'sequelize';
 
 
+
+const sequelize = new Sequelize('bodas', 'postgres', 'teamoRomina1000', {
+    host: 'bodify.cg7oal3ge1dk.us-east-1.rds.amazonaws.com',
+    dialect: 'postgres', /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
+    logging: false,
+    define: {
+        timestamps: true
+    }
+});
+
 const conectarDB = async()=>{
-    const sequelize = new Sequelize('bodas', 'postgres', 'teamoRomina1000', {
-        host: 'bodify.cg7oal3ge1dk.us-east-1.rds.amazonaws.com',
-        dialect: 'postgres', /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
-        logging: false,
-        define: {
-            timestamps: true
-        }
-    });
+    
     
     try {
         await sequelize.authenticate();
@@ -21,7 +24,7 @@ const conectarDB = async()=>{
 }
 
 export {
-    conectarDB
+    conectarDB, sequelize
 }
 
 

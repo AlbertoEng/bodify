@@ -1,21 +1,32 @@
 import express from 'express';
 import path from 'path';
 const routerAdmin  = express.Router();
+import { Invitado } from '../models/Invitado.js'
  
 
-
-
-
-routerAdmin.get('/:id', (req, res)=>{
+routerAdmin.get('/', async (req, res)=>{
     
     // verificar que sea un usuario Registrado, sino 404
-
+    
     // mostrar la pagina de admin
     res.sendFile(path.resolve('public/admin/panelAdmin.html'));
 
 
 
 })
+
+routerAdmin.get('/invitados', async (req, res)=>{
+    const listaInvitados = await Invitado.findAll({ where: {}});
+    res.status(200).json(listaInvitados);
+})
+
+routerAdmin.post('/agregarNuevo', async (req, res)=>{
+    const nuevoInvitado = req.body;
+
+    const result = await Invitado.create(nuevoInvitado);
+    res.json(result);
+})
+
 
 
 
