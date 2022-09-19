@@ -7,6 +7,8 @@
     console.log(invitados)
     const body = document.getElementsByTagName('body');
     const container = document.createElement('div');
+    const containerFormulario = document.createElement('div');
+    containerFormulario.className = 'formulario';
     container.className = 'container';
     const cajaTextoNombre = document.createElement('input');
     cajaTextoNombre.placeholder = 'Nombre';
@@ -19,9 +21,10 @@
     const boton = document.createElement('button');
     boton.innerText = 'Agregar nuevo Invitado'
     boton.classList = 'boton'
-    body[0].appendChild(cajaTextoNombre);
-    body[0].appendChild(cajaTextoApellido);
-    body[0].appendChild(boton);
+    containerFormulario.appendChild(cajaTextoNombre);
+    containerFormulario.appendChild(cajaTextoApellido);
+    containerFormulario.appendChild(boton);
+    body[0].appendChild(containerFormulario);
     body[0].appendChild(container);
 
 
