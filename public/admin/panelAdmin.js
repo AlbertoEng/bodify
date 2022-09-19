@@ -2,7 +2,7 @@
 
 (async function(){
     
-    const result = await axios.get('http://localhost:3000/admin/invitados');
+    const result = await axios.get('http://www.goweddings.net/admin/invitados');
     const { data: invitados } = result;
     console.log(invitados)
     const body = document.getElementsByTagName('body');
