@@ -14,7 +14,12 @@ routerAdmin.get('/', async (req, res)=>{
 })
 
 routerAdmin.get('/invitados', async (req, res)=>{
-    const listaInvitados = await Invitado.findAll({ where: {}});
+    try {
+        const listaInvitados = await Invitado.findAll({ where: {}});
+    } catch (error) {
+        console.log(error.message)
+    }
+    
     if(listaInvitados.length === 0){
         console.log('ora')
         return res.status(200).json([]);
