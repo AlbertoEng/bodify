@@ -2,9 +2,14 @@
 
 (async function(){
     
-    const result = await axios.get('http://www.goweddings.net/admin/invitados');
-    const { data: invitados } = result;
-    console.log(invitados)
+    const devHost = 'localhost:3000'
+    const productionHost = 'www.goweddings.net'
+
+    const result = await axios.get(`http://${productionHost}/admin/invitados`);
+
+    if(result.data){
+        invitados = result.data;
+    }
     const body = document.getElementsByTagName('body');
     const container = document.createElement('div');
     const containerFormulario = document.createElement('div');
@@ -21,15 +26,21 @@
     const boton = document.createElement('button');
     boton.innerText = 'Agregar nuevo Invitado'
     boton.classList = 'boton'
+
+    
     containerFormulario.appendChild(cajaTextoNombre);
     containerFormulario.appendChild(cajaTextoApellido);
     containerFormulario.appendChild(boton);
+    
+    
     body[0].appendChild(containerFormulario);
     body[0].appendChild(container);
 
+    
+
 
     boton.addEventListener('click', async (e)=>{
-        const result = await axios.post('http://www.goweddings.net/admin/agregarNuevo',{
+        const result = await axios.post(`http://${productionHost}/admin/agregarNuevo`,{
             nombre: cajaTextoNombre.value,
             apellido: cajaTextoApellido.value
         })

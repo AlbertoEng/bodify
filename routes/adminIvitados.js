@@ -11,16 +11,19 @@ routerAdmin.get('/', async (req, res)=>{
     // mostrar la pagina de admin
     res.sendFile(path.resolve('public/admin/panelAdmin.html'));
 
-
-
 })
 
 routerAdmin.get('/invitados', async (req, res)=>{
     const listaInvitados = await Invitado.findAll({ where: {}});
+    if(listaInvitados.length === 0){
+        console.log('ora')
+        return res.status(200).json([]);
+    }
     res.status(200).json(listaInvitados);
 })
 
 routerAdmin.post('/agregarNuevo', async (req, res)=>{
+
     const nuevoInvitado = req.body;
     const result = await Invitado.create(nuevoInvitado);
     res.json(result);
