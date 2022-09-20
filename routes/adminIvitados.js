@@ -14,22 +14,15 @@ routerAdmin.get('/', async (req, res)=>{
 })
 
 routerAdmin.get('/invitados', async (req, res)=>{
-    try {
-        const listaInvitados = await Invitado.findAll({ where: {}});
-    } catch (error) {
-        listaInvitados = [];
-        console.log(error.message)
-    }
     
-    if(listaInvitados.length === 0){
-        console.log('ora')
+    const listaInvitados = await Invitado.findAll({ where: {}});
+    if(!listaInvitados){
         return res.status(200).json([]);
     }
     res.status(200).json(listaInvitados);
 })
 
 routerAdmin.post('/agregarNuevo', async (req, res)=>{
-
     const nuevoInvitado = req.body;
     const result = await Invitado.create(nuevoInvitado);
     res.json(result);
