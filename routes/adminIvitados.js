@@ -17,6 +17,7 @@ routerAdmin.get('/invitados', async (req, res)=>{
     try {
         const listaInvitados = await Invitado.findAll({ where: {}});
     } catch (error) {
+        listaInvitados = [];
         console.log(error.message)
     }
     
