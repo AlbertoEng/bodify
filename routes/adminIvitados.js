@@ -7,7 +7,7 @@ import { Invitado } from '../models/Invitado.js'
 routerAdmin.get('/', async (req, res)=>{
     
     // verificar que sea un usuario Registrado, sino 404
-    console.log('pase por aqui')
+    
     // mostrar la pagina de admin
     res.sendFile(path.resolve('public/admin/panelAdmin.html'));
 

@@ -28,6 +28,8 @@
     boton.classList = 'boton'
 
     
+
+    
     containerFormulario.appendChild(cajaTextoNombre);
     containerFormulario.appendChild(cajaTextoApellido);
     containerFormulario.appendChild(boton);
@@ -47,11 +49,22 @@
         location.reload();
     })
 
+
+
+
     invitados.map(( invitado )=>{
-        let invitadoParrafo = document.createElement('p');
-        invitadoParrafo.innerText = `${invitado.id} ${invitado.nombre} ${invitado.apellido}`;
-        
-        container.appendChild(invitadoParrafo);
+        let invitadoItem = document.createElement('div');
+        const botonEliminar = document.createElement('button');
+        const botonEditar = document.createElement('button');
+        botonEliminar.innerText = 'Eliminar'
+        botonEliminar.classList = 'botonEliminarInvitado'
+        botonEditar.innerText = 'Editar'
+        botonEditar.classList = 'botonEditarInvitado'
+        invitadoItem.classList = 'itemContainer';
+        invitadoItem.innerHTML = `<p>${invitado.id} ${invitado.nombre} ${invitado.apellido}</p>`;
+        invitadoItem.appendChild(botonEliminar);
+        invitadoItem.appendChild(botonEditar);
+        container.appendChild(invitadoItem);
     })
 
 
