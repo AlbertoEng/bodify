@@ -5,7 +5,7 @@
     const devHost = 'localhost:3000'
     const productionHost = 'www.goweddings.net'
 
-    const result = await axios.get(`http://${devHost}/admin/invitados`);
+    const result = await axios.get(`http://${productionHost}/admin/invitados`);
 
     if(result.data){
         invitados = result.data;
@@ -40,7 +40,7 @@
 
 
     boton.addEventListener('click', async (e)=>{
-        const result = await axios.post(`http://${devHost}/admin/agregarNuevo`,{
+        const result = await axios.post(`http://${productionHost}/admin/agregarNuevo`,{
             nombre: cajaTextoNombre.value,
             apellido: cajaTextoApellido.value
         })
