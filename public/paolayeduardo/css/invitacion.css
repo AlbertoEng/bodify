@@ -533,8 +533,7 @@ body{
     display: flex;
     margin-top: 20px;
     margin-bottom: 100px;
-    justify-content: center;
-    gap: 40px;
+    justify-content: space-between;
     font-family: fontNunitoRegular;
 
 }
@@ -542,6 +541,7 @@ body{
 .etapa-itinerario{
     width: 200px;
     color: var(--letras);
+    flex: 1;
 }
 
 .etapa-itinerario div{
@@ -847,8 +847,9 @@ footer{
     }
 
     .etapas-container{
-        gap: 20px;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
     }
     .mapContainer{
         
@@ -1085,6 +1086,12 @@ footer{
     }
     .etapa-itinerario div img {
         width: 50px;
+    }
+
+    .etapas-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
     }
     .descripcion-etapa{
         width: 100%;
