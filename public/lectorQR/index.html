@@ -9,15 +9,5 @@
 </head>
 <body>
     <video id="video"></video>
-
-    <script type="module">
-        import QrScanner from './qr-scanner.min.js';
-        
-        const video = document.getElementById('video')
-
-        const qrScanner = new QrScanner(video, result => console.log('decoded qr code:', result));
-        qrScanner.start();
-        
-    </script>
 </body>
 </html>
