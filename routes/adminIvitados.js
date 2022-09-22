@@ -4,7 +4,7 @@ const routerAdmin  = express.Router();
 import { Invitado } from '../models/Invitado.js'
 import { Familia } from '../models/Familia.js'
 import { Fiesta } from '../models/Fiesta.js'
-import QRCode from 'qrcode'
+
 
 
 routerAdmin.get('/', async (req, res)=>{
