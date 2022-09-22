@@ -192,7 +192,7 @@ body{
 .caja1{
     width: 100%;
     height: 500px;
-    background-color: var(--cafe1);
+    background-color: var(--rosita);
     margin: 0px;
 }
 
@@ -258,12 +258,14 @@ body{
     border-bottom-right-radius: 400px;
     overflow: hidden;
     height: 600px;
+    position: relative;
 
 }
 
 .imagenCapsula{
-    width: 100%;
-    height: 100%;
+    width: 150%;
+    left: -190px;
+    position: absolute;
 }
 
 .fecha_boda_texto{
@@ -339,7 +341,7 @@ body{
 }
 .fondo-left-box{
     width: 50%;
-    background-color: var(--cafe1);
+    background-color: var(--cafe2);
     padding-left: 10%;
 }
 .fondo-right-box{
@@ -401,7 +403,7 @@ body{
     width: 100%;
     height: 100%;
     flex: 1;
-    background-color: var(--cafe1);
+    background-color: var(--cafe2);
 }
 .caja_2{
     flex: 1;
@@ -565,7 +567,7 @@ body{
 .horario-etapa{
     text-align: center;
     color: var(--letras);
-    font-size: 15px;
+    font-size: 25px;
 }
 .descripcion-etapa{
     margin-top: 20px;
@@ -588,8 +590,9 @@ body{
 }
 
 .mesa-regalos{
-    height: 400px;
-    padding-top: 40px;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: var(--cafe4);
 }
 .titulo-mesa-ragalos{
@@ -632,9 +635,6 @@ body{
 }
 .container-final div img {
     width: 100%;
-    height: 1000px;
-    z-index: 0;
-    
 }
 
 .container-form{
@@ -839,7 +839,8 @@ footer{
     }
     
     .imagenCapsula{
-        height: 100%
+        width: 150%;
+        left: -150px;
     }
     .container-form{
         width: 100%;
@@ -943,9 +944,6 @@ footer{
     #button_salir_map:hover{
         cursor: pointer;
     }
-    .imgFinal img{
-        visibility: hidden;
-    }
     .imgFinal{
         background-color: var(--cafe4);
     }
@@ -1027,9 +1025,14 @@ footer{
         padding: 70px 0px 20px;
   
     }
+    .imagenCapsula{
+        width: 150%;
+        left: -120px;
+    }
     .left-box{
         height: 150px;
     }
+    
     #img_anillos{
         height: 150px;
     }
@@ -1072,9 +1075,7 @@ footer{
     .titulo{
         font-size: 50px;
     }
-    .mesa-regalos{
-        height: 500px;
-    }
+
     .tiendas-container{
         display: flex;
         flex-direction: column;
@@ -1122,6 +1123,9 @@ footer{
         font-family: fontBodaBold;
         font-size: 30px;
         color: var(--rosita);
+    }
+    .imagenSobre{
+        width: 100px;
     }
     .bodify{
         display: flex;

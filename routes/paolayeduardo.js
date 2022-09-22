@@ -3,7 +3,7 @@ import path from 'path';
 const router  = express.Router();
  
 
-router.get('/paolayeduardo/:id', (req, res)=>{
+router.get('/paolayeduardo', (req, res)=>{
 
     // revisar que el id sea el de una familia registrado en DB
     // sino retorna un 404 de recurso no encontrado

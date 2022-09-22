@@ -1,3 +1,4 @@
+import axios from "axios";
 
 
 (async function(){
@@ -5,7 +6,10 @@
     const devHost = 'localhost:3000'
     const productionHost = 'www.goweddings.net'
 
-    const result = await axios.get(`http://${productionHost}/admin/invitados`);
+
+    const fiestas = await axios.get(`http://${devHost}/admin/fiestas`)
+
+    const result = await axios.get(`http://${devHost}/admin/invitados`);
 
     if(result.data){
         invitados = result.data;
@@ -19,10 +23,6 @@
     cajaTextoNombre.placeholder = 'Nombre';
     cajaTextoNombre.classList = 'cajaTextoNombre';
     cajaTextoNombre.name = 'nombre';
-    const cajaTextoApellido = document.createElement('input');
-    cajaTextoApellido.placeholder = 'Apellido';
-    cajaTextoApellido.classList = 'cajaTextoApellido';
-    cajaTextoApellido.name = 'apellido';
     const boton = document.createElement('button');
     boton.innerText = 'Agregar nuevo Invitado'
     boton.classList = 'boton'
@@ -31,7 +31,6 @@
 
     
     containerFormulario.appendChild(cajaTextoNombre);
-    containerFormulario.appendChild(cajaTextoApellido);
     containerFormulario.appendChild(boton);
     
     
@@ -42,9 +41,9 @@
 
 
     boton.addEventListener('click', async (e)=>{
-        const result = await axios.post(`http://${productionHost}/admin/agregarNuevo`,{
+        const result = await axios.post(`http://${devHost}/admin/agregarNuevo`,{
             nombre: cajaTextoNombre.value,
-            apellido: cajaTextoApellido.value
+            
         })
         location.reload();
     })
