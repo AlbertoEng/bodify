@@ -737,7 +737,8 @@ footer{
 .bodify{
     display: flex;
     justify-content: flex-end;
-    
+    align-items: flex-end;
+    flex-direction: column;
     padding: 10px;
     font-family: fontNunitoRegular;
     margin-right: 20px;
@@ -745,6 +746,10 @@ footer{
 
 .textoBodify{
     color: var(--rosa_fuerte);
+}
+
+.celular{
+    color: white;
 }
 
 
@@ -770,6 +775,11 @@ footer{
 
 .tituloForm{
     color: var(--letras);
+}
+
+.paginaweb{
+    color: white;
+    text-decoration: none;
 }
 /*
 #####################################################
