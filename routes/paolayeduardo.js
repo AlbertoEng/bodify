@@ -21,7 +21,8 @@ router.get('/paolayeduardo', (req, res)=>{
     //mostramos la invitacion.html con los invitados  dentro del formulario
     // para ser confirmados.
 
-    res.sendFile(path.resolve('public/paolayeduardo/html/invitacion.html'));
+    // res.sendFile(path.resolve('public/paolayeduardo/html/invitacion.html'));
+    res.end('hola')
 })
 
 router.get('/paolayeduardo/:id',async (req, res)=>{
