@@ -1,5 +1,8 @@
 import express from 'express';
 import path from 'path';
+import client from 'twilio';
+
+
 const router  = express.Router();
  
 
@@ -20,17 +23,29 @@ router.get('/paolayeduardo', (req, res)=>{
     res.sendFile(path.resolve('public/paolayeduardo/html/invitacion.html'));
 })
 
-router.post('paolayeduardo/:id', (req, res)=>{
+router.get('/paolayeduardo/:id',async (req, res)=>{
 
     // verificar que el id sea de una familia de DB
 
     // si existe verificar la data que viene en el Body del request.
 
     // recorrer el objeto y setear campo confirmado = true en tabla de invitado.
+    console.log('hola')
+    // clavedeenvio
+    // SSID = SK2675a223ef2d3619cd0b062366cef870
+    // secret =  rxrMhzSLJMFXp64ShL6p3t6RHHLZINXF
+    const accountSid = 'AC4a9ceb19870051793be2a68cc492a09a';
+    const authToken = '32745a58bc4be416d9793b71e785f5f1';
+    const twilioClient = client(accountSid, authToken);
 
-
-
-    console.log(req.body)
+    await twilioClient.messages
+        .create({
+            from: 'whatsapp:+14155238886',
+            body: 'Que ondas pinche lalosky, haciendo pruebas con libreria de twilio',
+            to: 'whatsapp:+5213141003038'
+        })
+        .then(message => console.log(message.sid));
+    
     res.end('ok')
 })
 

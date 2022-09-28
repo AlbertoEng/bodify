@@ -6,8 +6,6 @@
     --letras_verdes: #006A6A;
     --negro_oscuro: #232323;
 
-
-
     --cafe1: #f5cfa4;
     --cafe2: #ffeedb;
     --cafe3: #e6ba86;
@@ -21,6 +19,7 @@
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+    user-select: none;
 }
 
 

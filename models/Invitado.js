@@ -1,6 +1,6 @@
 import { DataTypes, UUID} from 'sequelize';
 import { sequelize } from '../DB/conexion.js'
-import { Familia } from './Familia.js';
+
 
 const Invitado = sequelize.define("invitados", {
   id: {
@@ -23,18 +23,21 @@ const Invitado = sequelize.define("invitados", {
       defaultValue: DataTypes.UUIDV4
   },
   mesa: {
-    type: DataTypes.INTEGER,
-    allowNull: false
+    type: DataTypes.STRING(10),
+    allowNull: true
+  },
+  grupo: {
+    type: DataTypes.STRING(10),
+    allowNull: true
+  },
+  telefono: {
+    type: DataTypes.STRING(45),
+    allowNull: true
   }
 },{
   timestamps: false
 })
 
-Familia.hasMany(Invitado, {
-  sourceKey: 'id',
-  foreignKey: 'familia_id',
-  autoIncrement: true
-})
 
 export {
   Invitado
