@@ -8,6 +8,7 @@ const router  = express.Router();
 
 router.get('/paolayeduardo', (req, res)=>{
 
+    console.log('ok');
     // revisar que el id sea el de una familia registrado en DB
     // sino retorna un 404 de recurso no encontrado
 
