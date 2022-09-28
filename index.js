@@ -1,7 +1,6 @@
 import express from 'express';
 import path from 'path';
 import cors from 'cors';
-
 import {router} from './routes/paolayeduardo.js'
 import {routerAdmin} from './routes/adminIvitados.js'
 import {routerAuth} from './routes/auth.js'
@@ -11,7 +10,6 @@ import { conectarDB } from './DB/conexion.js';
 const app = express();
 
 app.use(cors());
-
 
 app.use(express.json());
 
