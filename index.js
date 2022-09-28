@@ -11,7 +11,7 @@ import { conectarDB } from './DB/conexion.js';
 const app = express();
 
 app.use(cors());
-app.use(morgan('dev'))
+app.use(morgan('production'))
 
 app.use(express.json());
 
