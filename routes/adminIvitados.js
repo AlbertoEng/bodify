@@ -1,21 +1,21 @@
 import express from 'express';
 import path from 'path';
-const routerAdmin  = express.Router();
+const routerAdmin = express.Router();
 import { Invitado } from '../models/Invitado.js'
 
 
 
 
-routerAdmin.get('/', async (req, res)=>{
-    
+routerAdmin.get('/', async (req, res) => {
+
     // verificar que sea un usuario Registrado, sino 404
-    
+
     // mostrar la pagina de admin
     // res.sendFile(path.resolve('public/admin/panelAdmin.html'));
 
 })
 
-routerAdmin.get('/lista-invitados', async (req, res)=>{
+routerAdmin.get('/lista-invitados', async (req, res) => {
 
     // const nuevaFamilia = await Familia.create({
     //     nombre_familia: 'Familia2',
@@ -42,34 +42,50 @@ routerAdmin.get('/lista-invitados', async (req, res)=>{
 
 
     // console.log(nuevoInvitado)
-    
+
 })
 
-routerAdmin.put('/lista-invitados/grupo/:id', async (req,res)=>{
+routerAdmin.put('/lista-invitados/grupo/:id', async (req, res) => {
     const result = await Invitado.update({ grupo: req.body.grupo }, {
         where: {
-          id: req.body.id
+            id: req.body.id
         }
     });
+
+    if (result?.grupo == '') {
+        result.grupo = null;
+    }
+
+    await result.save();
+
     res.end();
 })
 
-routerAdmin.put('/lista-invitados/mesa/:id', async (req,res)=>{
+routerAdmin.put('/lista-invitados/mesa/:id', async (req, res) => {
     const result = await Invitado.update({ mesa: req.body.mesa }, {
         where: {
-          id: req.body.id
+            id: req.body.id
         }
     });
+
+
+    if (result?.mesa == '') {
+        result.mesa = null;
+    }
+
+    await result.save();
     res.end();
 })
 
-routerAdmin.post('/agregarNuevo', async (req ,res)=>{
+routerAdmin.post('/lista-invitados/agregarNuevo', async (req, res) => {
+    console.log(req.body)
     const result = await Invitado.create(req.body)
-    res.status(200).json(result);
+    return res.status(200).json(result);
+
 })
 
-routerAdmin.delete('/eliminar/:id', async (req, res)=>{
-    const result = await Invitado.destroy({where: req.params})
+routerAdmin.delete('/eliminar/:id', async (req, res) => {
+    const result = await Invitado.destroy({ where: req.params })
     res.status(200).json(result);
 })
 
