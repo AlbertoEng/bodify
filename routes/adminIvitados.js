@@ -56,8 +56,6 @@ routerAdmin.put('/lista-invitados/grupo/:id', async (req, res) => {
         result.grupo = null;
     }
 
-    await result.save();
-
     res.end();
 })
 
