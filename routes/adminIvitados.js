@@ -71,7 +71,6 @@ routerAdmin.put('/lista-invitados/mesa/:id', async (req, res) => {
         result.mesa = null;
     }
 
-    await result.save();
     res.end();
 })
 
