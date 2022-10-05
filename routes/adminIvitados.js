@@ -86,6 +86,11 @@ routerAdmin.delete('/lista-invitados/eliminar/:id', async (req, res) => {
     res.status(200).json(result);
 })
 
+routerAdmin.get('/lista-invitados/obtenerInvitadosByGrupo/:grupo', async (req, res) => {
+    console.log(req.params.grupo)
+    const result = await Invitado.findAll({ where: { grupo: req.params.grupo } })
+    res.status(200).json(result);
+})
 
 
 
