@@ -81,7 +81,7 @@ routerAdmin.post('/lista-invitados/agregarNuevo', async (req, res) => {
 
 })
 
-routerAdmin.delete('/eliminar/:id', async (req, res) => {
+routerAdmin.delete('/lista-invitados/eliminar/:id', async (req, res) => {
     const result = await Invitado.destroy({ where: req.params })
     res.status(200).json(result);
 })
