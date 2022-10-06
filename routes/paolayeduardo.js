@@ -1,10 +1,7 @@
 import express from 'express';
 import path from 'path';
-
-
-
 const router = express.Router();
-
+import { Invitado } from '../models/Invitado.js'
 
 // router.get('/paolayeduardo', (req, res) => {
 
@@ -28,6 +25,39 @@ const router = express.Router();
 router.get('/paolayeduardo/:id', async (req, res) => {
 
     res.sendFile(path.resolve('public/paolayeduardo/html/invitacion.html'));
+
+
+})
+
+router.post('/paolayeduardo/:id', async (req, res) => {
+
+    // convertir keys a array
+    const arreglo = Object.keys(req.body).map((clave) => {
+        return Number(clave);
+    });
+
+
+    // revisar el grupo con ese id
+    const result = await Invitado.findAll({ where: { grupo: req.params.id } })
+    if (result) {
+        result.forEach((invitado) => {
+            if (arreglo.includes(invitado.id)) {
+                invitado.confirmado = true;
+                invitado.save();
+            } else {
+                invitado.confirmado = false;
+                invitado.save();
+            }
+        })
+
+    }
+
+
+    res.status(200).end('<h1 style="text-align: center; margin-top: 50px;"> Hemos confirmado sus datos Exitosamente, Gracias.</h1>')
+
+
+    // establecer un nuevo objeto con los confirmados
+
 
 
 })

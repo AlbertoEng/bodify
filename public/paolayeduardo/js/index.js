@@ -8,11 +8,33 @@
     let mostrarMapaCeremonia = document.getElementById('abrir_mapa_ceremonia');
     let mostrarMapaRecepcion = document.getElementById('abrir_mapa_recepcion');
     let quitarMapa = document.getElementById('button_salir_map');
+
+
+    let contenedor_form = document.getElementsByClassName('form-invitados');
+    let container_form = document.getElementsByClassName('container-form');
+
+
+
     // console.log(window.location.href)
     let refId = window.location.pathname.replace('/paolayeduardo/', '');
     try {
+        console.log(refId)
         const lista = await axios.get(`http://www.goweddings.net/admin/lista-invitados/obtenerInvitadosByGrupo/${refId}`);
-        console.log(lista)
+        console.log(lista.data)
+        let htmlInvitados = ''
+        lista.data.map((invitado) => {
+            htmlInvitados += `<div class="contenedor-form">
+            <p class="nombre-invitado">${invitado.nombre}</p>
+            <input class="checkbox-confirmar" type="checkbox" ${invitado.confirmado ? 'checked' : ''} name=${invitado.id}>
+        </div>`
+        })
+
+        htmlInvitados += ` <div class="container-button">
+        <input class="boton" type="submit" value="Confirmo Asistencia">
+    </div>`;
+
+        contenedor_form[0].innerHTML = htmlInvitados;
+        container_form[0].appendChild(contenedor_form);
     } catch (error) {
 
     }

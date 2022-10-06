@@ -1,4 +1,4 @@
-:root{
+:root {
     --rosita: #FBF8F3;
     --banda_cafe: #6D4D36;
     --rosa_fuerte: #FBC2B0;
@@ -12,10 +12,10 @@
     --cafe4: #ffe0bf;
     --cafe5: #f2dfcc;
     --letras: #362d1c;
-    
+
 }
 
-*{
+* {
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
@@ -28,6 +28,7 @@
     font-family: fontBodaRegular;
     src: url('/paolayeduardo/assets/Hello Paris Sans/Hello Paris Sans Regular.ttf');
 }
+
 @font-face {
     font-family: fontBodaExtraLight;
     src: url('/paolayeduardo/assets/Hello Paris Sans/Hello Paris Sans ExtraLight.ttf');
@@ -42,24 +43,28 @@
     font-family: fontBodaMedium;
     src: url('/paolayeduardo/assets/Hello Paris Sans/Hello Paris Sans Medium.ttf');
 }
+
 @font-face {
     font-family: fontBodaBold;
     src: url('/paolayeduardo/assets/Hello Paris Sans/Hello Paris Sans Bold.ttf');
 }
+
 @font-face {
     font-family: fontNunitoRegular;
     src: url('/paolayeduardo/assets/Nunito/Nunito-Regular.ttf');
 }
+
 @font-face {
     font-family: fontNunitoLight;
     src: url('/paolayeduardo/assets/Nunito/Nunito-Light.ttf');
 }
+
 @font-face {
     font-family: fontNunitoBold;
     src: url('/paolayeduardo/assets/Nunito/Nunito-Bold.ttf');
 }
 
-body{
+body {
     margin: 0px;
     padding: 0px;
     background-color: #ffffff;
@@ -67,24 +72,26 @@ body{
     position: relative;
 }
 
-.contenedor_mapa{
+.contenedor_mapa {
     visibility: hidden;
     position: fixed;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.9);
     z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#map{
+
+#map {
     width: 60%;
     height: 80%;
     border-radius: 20px;
     box-shadow: 0px 0px 10px white;
 }
-#button_salir_map{
+
+#button_salir_map {
     position: absolute;
     top: 0px;
     right: 0px;
@@ -100,24 +107,27 @@ body{
     font-weight: bold;
     font-family: fontNunitoRegular;
 }
-#button_salir_map:hover{
+
+#button_salir_map:hover {
     cursor: pointer;
     background-color: rgb(255, 3, 3);
 
 }
 
 
-.containerPpal{
+.containerPpal {
     width: 100%;
     max-width: 1633px;
     margin: 0 auto;
     box-shadow: 0px 0px 10px black;
-    
+
 }
-.banner{
+
+.banner {
     position: relative;
     height: 600px;
 }
+
 /* .banner{
     background-image: url('/paolayeduardo/img/Desktop/imagenes/paolayeduardo3.jpeg');
     background-size: cover;
@@ -131,11 +141,12 @@ body{
     margin: 0 auto;
 } */
 
-.divBanner{
+.divBanner {
     width: 100%;
     height: auto;
 }
-.caja-encima{
+
+.caja-encima {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -144,27 +155,27 @@ body{
     margin-left: auto;
     margin-right: auto;
     padding: 0px;
-    background-color: rgba(0,0,0,0.5)
+    background-color: rgba(0, 0, 0, 0.5)
 }
 
-.imgHeader{
+.imgHeader {
     width: 100%;
 }
 
 
 
-.containerLogo{
+.containerLogo {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-#logo{
+#logo {
     width: 400px;
 
 }
 
-.containerTitulo{
+.containerTitulo {
     margin-top: 0px;
     display: flex;
     flex-direction: column;
@@ -175,7 +186,7 @@ body{
 
 
 
-.titulo{
+.titulo {
     font-size: 90px;
     color: white;
     margin: 0px auto;
@@ -184,18 +195,18 @@ body{
 }
 
 
-.containerCajas{
+.containerCajas {
     position: relative;
 }
 
-.caja1{
+.caja1 {
     width: 100%;
     height: 500px;
     background-color: var(--rosita);
     margin: 0px;
 }
 
-.caja2{
+.caja2 {
     width: 750px;
     height: 1200px;
     background-color: var(--cafe2);
@@ -208,26 +219,26 @@ body{
     border-radius: 400px;
     display: flex;
     flex-direction: column;
-    
+
 }
 
-.caja3{
+.caja3 {
     width: 100%;
     height: 800px;
     background-color: var(--rosita);
 }
 
-.capsula_top{
+.capsula_top {
     font-size: 70px;
     color: var(--letras);
-    
+
     text-align: center;
     overflow: hidden;
     font-weight: bold;
     font-family: fontBodaLight;
 }
 
-.capsula_bottom{
+.capsula_bottom {
     font-size: 100px;
     text-align: justify;
     font-family: fontNunitoRegular;
@@ -236,12 +247,13 @@ body{
     padding-top: 15px;
 }
 
-.mensaje{
+.mensaje {
     font-size: 40px;
     color: #232323;
     font-weight: bold;
 }
-.capsulaContainerTop{
+
+.capsulaContainerTop {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -251,7 +263,7 @@ body{
 }
 
 
-.capsulaContainerBottom{
+.capsulaContainerBottom {
 
     border-bottom-left-radius: 400px;
     border-bottom-right-radius: 400px;
@@ -261,13 +273,13 @@ body{
 
 }
 
-.imagenCapsula{
+.imagenCapsula {
     width: 150%;
     left: -190px;
     position: absolute;
 }
 
-.fecha_boda_texto{
+.fecha_boda_texto {
     font-family: fontNunitoRegular;
     font-size: 30px;
     background-color: var(--rosita);
@@ -277,11 +289,11 @@ body{
     font-weight: bold;
 }
 
-.cuadro_borde_abajo{
+.cuadro_borde_abajo {
     width: 100%;
     height: 60px;
     background-color: var(--rosita);
-    
+
 }
 
 
@@ -293,16 +305,16 @@ body{
     margin: 0 auto;
 }
 
-.fecha{
-   font-family: fontBodaBold; 
-   font-size: 80px;
-   text-align: center;
-   background-color: var(--rosita);
-   padding-bottom: 60px;
-   color: var(--letras);
+.fecha {
+    font-family: fontBodaBold;
+    font-size: 80px;
+    text-align: center;
+    background-color: var(--rosita);
+    padding-bottom: 60px;
+    color: var(--letras);
 }
 
-.banda_cafe{
+.banda_cafe {
     width: 100%;
     height: 200px;
     background-color: var(--banda_cafe);
@@ -313,7 +325,7 @@ body{
     font-size: 30px;
 }
 
-.cuadros_fecha{
+.cuadros_fecha {
     width: 200px;
     display: flex;
     flex-direction: column;
@@ -321,10 +333,10 @@ body{
     font-size: 100px;
     color: var(--rosita);
     font-family: fontBodaRegular;
-    border-right: 2px solid  #FBF8F3;
+    border-right: 2px solid #FBF8F3;
 }
 
-.cuadros_fecha:last-child{
+.cuadros_fecha:last-child {
     border-right: none;
 }
 
@@ -333,36 +345,39 @@ body{
     font-family: fontNunitoRegular;
 }
 
-.container_capsula2{
+.container_capsula2 {
     display: flex;
     width: 100%;
 
 }
-.fondo-left-box{
+
+.fondo-left-box {
     width: 50%;
     background-color: var(--cafe2);
     padding-left: 10%;
 }
-.fondo-right-box{
+
+.fondo-right-box {
     width: 50%;
     background-color: var(--cafe2);
     padding-right: 10%;
 }
 
-#aventura1{
-    font-size: 50px;
-    font-family: fontBodaBold;
-    color: var(--banda_cafe);
-    font-weight: bold;
-}
-#aventura2{
+#aventura1 {
     font-size: 50px;
     font-family: fontBodaBold;
     color: var(--banda_cafe);
     font-weight: bold;
 }
 
-.left-box{
+#aventura2 {
+    font-size: 50px;
+    font-family: fontBodaBold;
+    color: var(--banda_cafe);
+    font-weight: bold;
+}
+
+.left-box {
     width: 100%;
     height: 385px;
     border-top-left-radius: 190px;
@@ -375,14 +390,15 @@ body{
     font-family: fontBodaBold;
     color: var(--letras_verdes)
 }
-.right-box{
+
+.right-box {
     width: 100%;
     height: 400px;
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
 }
 
-#img_anillos{
+#img_anillos {
     width: 100%;
     height: 385px;
 }
@@ -393,23 +409,25 @@ body{
 
 
 
-.relleno{
+.relleno {
     width: 100%;
     height: 50px;
     display: flex;
 }
-.caja_1{
+
+.caja_1 {
     width: 100%;
     height: 100%;
     flex: 1;
     background-color: var(--cafe2);
 }
-.caja_2{
+
+.caja_2 {
     flex: 1;
     background-color: var(--cafe2);
 }
 
-.mapContainer{
+.mapContainer {
     width: 100%;
     height: 800px;
     margin-top: 150px;
@@ -418,6 +436,7 @@ body{
     align-items: center;
     position: relative;
 }
+
 .mapa {
     width: 45%;
     height: 700px;
@@ -427,7 +446,7 @@ body{
     overflow: hidden;
 }
 
-.mapa:hover{
+.mapa:hover {
     cursor: pointer;
 
 }
@@ -437,9 +456,9 @@ body{
     height: 100%;
 }
 
-.ver-mapa{
+.ver-mapa {
     position: absolute;
-    width:200px;
+    width: 200px;
     background-color: var(--cafe3);
     color: var(--letras);
     font-weight: bold;
@@ -450,14 +469,15 @@ body{
     padding: 10px;
     border-top-left-radius: 10px;
 }
-.ver-mapa:hover{
+
+.ver-mapa:hover {
     background-color: var(--cafe1);
     color: var(--letras);
 }
 
 
 
-.caja_hora{
+.caja_hora {
     width: 120px;
     background-color: var(--cafe5);
     position: absolute;
@@ -473,16 +493,17 @@ body{
     font-weight: bold;
     font-size: 20px;
     z-index: 20;
-    
+
 }
 
-.capa_oscura{
+.capa_oscura {
     width: 100%;
     height: 100%;
     position: absolute;
     bottom: 0px;
     color: white;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) , rgba(0,0,0,0.5));;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    ;
     font-family: fontNunitoRegular;
     z-index: 2;
 }
@@ -490,22 +511,22 @@ body{
 .capa_oscura .caja_hora {
     position: absolute;
     bottom: 0px;
-    
+
 }
 
-.capa_oscura div h3{
+.capa_oscura div h3 {
     margin-bottom: 20px;
 }
 
-.capa_oscura div p{
+.capa_oscura div p {
     margin: 3px;
 }
 
-.caja_datos{
+.caja_datos {
     position: absolute;
     bottom: 0px;
     padding: 50px 20px;
-    background: linear-gradient( to top, rgba(0, 0, 0.3),rgba(0,0,0,0.1),rgba(0,0,0,0.0));
+    background: linear-gradient(to top, rgba(0, 0, 0.3), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.0));
     width: 100%;
     height: 100%;
     display: flex;
@@ -513,22 +534,24 @@ body{
     justify-content: flex-end;
 }
 
-.itinerario-titulo{
+.itinerario-titulo {
     text-align: center;
     margin-top: 30px;
     font-family: fontBodaBold;
     font-size: 60px;
     color: var(--banda_cafe);
 }
-.ornamento-itinerio{
+
+.ornamento-itinerio {
     display: flex;
     justify-content: center;
 }
-.ornamento-itinerio img{
+
+.ornamento-itinerio img {
     width: 50%;
 }
 
-.etapas-container{
+.etapas-container {
     display: flex;
     margin-top: 20px;
     margin-bottom: 100px;
@@ -537,43 +560,45 @@ body{
 
 }
 
-.etapa-itinerario{
+.etapa-itinerario {
     width: 200px;
     color: var(--letras);
     flex: 1;
 }
 
-.etapa-itinerario div{
+.etapa-itinerario div {
     margin: 0 auto;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.etapa-itinerario img{
+.etapa-itinerario img {
     margin-top: 20px;
     width: 50px;
     height: 50px;
 }
 
-.titulo-etapa{
+.titulo-etapa {
     text-align: center;
     font-size: 20px;
     margin: 15px 30px;
     color: var(--banda_cafe);
     font-weight: bold;
 }
-.horario-etapa{
+
+.horario-etapa {
     text-align: center;
     color: var(--letras);
     font-size: 25px;
 }
-.descripcion-etapa{
+
+.descripcion-etapa {
     margin-top: 20px;
     text-align: center;
 }
 
-.video{
+.video {
     margin: 50px 50px;
     display: flex;
     justify-content: center;
@@ -582,45 +607,49 @@ body{
     box-shadow: 0px 0px 10px grey;
 }
 
-.video video{
+.video video {
     width: 100%;
     height: 100%;
     border-radius: 20px;
 }
 
-.mesa-regalos{
+.mesa-regalos {
     height: auto;
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: var(--cafe4);
 }
-.titulo-mesa-ragalos{
+
+.titulo-mesa-ragalos {
     font-size: 30px;
     text-align: center;
     font-family: fontNunitoRegular;
     color: var(--letras);
 }
-.borde_abajo_mesa_regalos div{
+
+.borde_abajo_mesa_regalos div {
     width: 50px;
     height: 25px;
     margin: 0 auto;
     border-bottom: 2px solid var(--banda_cafe);
 }
-.tiendas-container{
+
+.tiendas-container {
     display: flex;
     margin-top: 30px;
     color: var(--banda_cafe);
     justify-content: space-evenly;
 }
 
-.tienda{
+.tienda {
     font-size: 80px;
     font-family: fontBodaExtraLight;
     text-align: center;
     color: #006A6A;
     font-weight: bolder;
 }
-.codigo-evento{
+
+.codigo-evento {
     font-size: 30px;
     text-align: center;
     font-family: fontNunitoBold;
@@ -628,14 +657,19 @@ body{
     font-weight: bolder;
 }
 
+.container-final {
+    position: relative;
+    height: 1500px;
+}
+
 .container-final div img {
     width: 100%;
 }
 
-.container-form{
+.container-form {
     position: absolute;
-    width: 1000px;
-    height: 1100px;
+    width: 70%;
+    height: auto;
     bottom: 0px;
     background-color: var(--cafe2);
     z-index: 2;
@@ -646,12 +680,14 @@ body{
     border-top-left-radius: 500px;
     border-top-right-radius: 500px;
 }
-#ornamento-form{
+
+#ornamento-form {
     width: 100px;
     height: 80px;
     margin-bottom: 40px;
 }
-.texto-confirmanos{
+
+.texto-confirmanos {
     margin-top: 200px;
     text-align: center;
     font-size: 50px;
@@ -660,71 +696,76 @@ body{
     margin-bottom: 50px;
 }
 
-.form-invitados{
+.form-invitados {
     font-family: fontNunitoBold;
     background-color: var(--cafe1);
-    width: 95%;
+    width: 70%;
     margin: 0 auto;
     padding: 20px;
     box-shadow: 0px 0px 5px gray;
     border-radius: 20px;
 }
-.contenedor-form{
+
+.contenedor-form {
     margin-top: 5px;
     display: grid;
     grid-template-columns: 4fr 1fr;
     column-gap: 10px;
-    height: 50px;
     justify-content: center;
     align-items: center;
 }
-.nombre-invitado{
-    font-size: 40px;
+
+.nombre-invitado {
+    font-size: 30px;
     text-align: center;
     color: var(--letras);
 }
-.checkbox-confirmar{
+
+.checkbox-confirmar {
     width: 40px;
     height: 40px;
     margin: 0 auto;
 }
-.container-button{
+
+.container-button {
     margin-top: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
 
-.boton{
+.boton {
     width: 300px;
     background-color: var(--cafe2);
     color: var(--letras);
     border: none;
     font-family: fontNunitoRegular;
-    font-size: 30px;
+    font-size: 20px;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 0px 10px gray;
 }
 
-.boton:hover{
+.boton:hover {
     background-color: var(--cafe3);
     cursor: pointer;
 }
 
-footer{
+footer {
     background-color: var(--banda_cafe);
 }
-.logo_footer{
+
+.logo_footer {
     width: 20%;
 }
-.texto_footer{
+
+.texto_footer {
     font-family: fontBodaBold;
     font-size: 50px;
     color: var(--rosita);
 }
 
-.container-footer{
+.container-footer {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -733,7 +774,7 @@ footer{
 
 }
 
-.bodify{
+.bodify {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -743,200 +784,230 @@ footer{
     margin-right: 20px;
 }
 
-.textoBodify{
+.textoBodify {
     color: var(--rosa_fuerte);
 }
 
-.celular{
+.celular {
     color: white;
 }
 
 
 
-.frame-video{
+.frame-video {
     width: 100%;
     height: 800px;
-    
+
 }
 
-.video{
+.video {
     box-shadow: 0px 0px 30px black;
 }
 
-.imgsobreContainer{
+.imgsobreContainer {
     margin-top: 30px;
     display: flex;
     justify-content: center;
 }
-.imagenSobre{
+
+.imagenSobre {
     width: 150px;
 }
 
-.tituloForm{
+.tituloForm {
     color: var(--letras);
 }
 
-.paginaweb{
+.paginaweb {
     color: white;
     text-decoration: none;
 }
+
 /*
 #####################################################
 #####################################################
 #####################################################
 */
 
-@media screen and (max-width: 1200px) { 
+@media screen and (max-width: 1200px) {
 
-    .banner{
+    .banner {
         height: auto;
     }
-    .divBanner{
+
+    .divBanner {
         height: 100%;
     }
-    .imgHeader{
+
+    .imgHeader {
         height: 100%;
     }
-    #logo{
+
+    #logo {
         width: 250px;
     }
-    .titulo{
+
+    .titulo {
         font-size: 8px;
     }
-    .caja2{
-        width: 550px; 
+
+    .caja2 {
+        width: 550px;
         height: 1100px;
         border-radius: 485px;
         top: -98px;
     }
-    .caja3{
+
+    .caja3 {
         height: 600px;
     }
-    .capsula_top{
+
+    .capsula_top {
         font-size: 50px;
     }
-    .capsula_bottom{
+
+    .capsula_bottom {
         font-size: 50px;
         padding: 30px
     }
-    .mensaje{
+
+    .mensaje {
         font-size: 40px;
     }
-    .fondo-left-box{
+
+    .fondo-left-box {
         padding-left: 0px;
     }
-    .fondo-right-box{
+
+    .fondo-right-box {
         padding-right: 0px;
     }
-    #aventura1{
+
+    #aventura1 {
         font-size: 30px;
     }
-    #aventura2{
+
+    #aventura2 {
         font-size: 30px;
     }
-    .capsulaContainerTop{
+
+    .capsulaContainerTop {
         padding: 0px;
         height: 500px;
     }
-    .capsulaContainerBottom{
+
+    .capsulaContainerBottom {
         height: 500px;
 
     }
-    
-    .imagenCapsula{
+
+    .imagenCapsula {
         width: 150%;
         left: -150px;
     }
-    .container-form{
-        width: 100%;
-    }
 
-    .etapas-container{
+
+
+    .etapas-container {
         flex-direction: column;
         align-items: center;
         gap: 80px;
     }
-    .mapContainer{
-        
+
+    .mapContainer {
+
         flex-direction: column;
     }
-    .mapa{
+
+    .mapa {
         width: 70%;
         height: 500px;
         margin: 20px;
     }
-    .container-form{
-        width: 100%;
+
+    .container-form {
+        position: relative;
+        width: 80%;
+        height: 100%;
     }
 
-    .titulo{
+    .titulo {
         font-size: 70px;
     }
 
-    .fecha{
+    .fecha {
         font-size: 55px;
     }
 
-    .video{
+    .video {
         margin: 50px auto;
         width: 98%;
     }
 
-    .etapa-itinerario{
+    .etapa-itinerario {
         width: 80%;
     }
+
     .etapa-itinerario div img {
         width: 70px;
     }
-    .descripcion-etapa{
+
+    .descripcion-etapa {
         width: 60%;
         font-size: 30px;
         margin: 0 auto;
         font-weight: bold;
     }
-    .titulo-etapa{
+
+    .titulo-etapa {
         font-size: 40px;
     }
-    .contenedor-form{
-        height: 80px;
+
+    .contenedor-form {
+
         grid-template-columns: 4fr 1fr;
     }
-    .checkbox-confirmar{
+
+    .checkbox-confirmar {
         margin: 0 auto;
     }
-    .form-invitados{
+
+    .form-invitados {
         padding: 20px 10px;
-        width: 90%;
     }
 
-    .contenedor_mapa{
+    .contenedor_mapa {
         visibility: hidden;
         position: fixed;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0,0,0,0.9);
+        background-color: rgba(0, 0, 0, 0.9);
         z-index: 10;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .left-box{
+    .left-box {
         height: 150px;
     }
-    .right-box{
+
+    .right-box {
         height: 150px;
     }
-    #img_anillos{
+
+    #img_anillos {
         height: 150px;
     }
-    #map{
+
+    #map {
         width: 95%;
         height: 80%;
         border-radius: 20px;
         box-shadow: 0px 0px 10px white;
     }
-    #button_salir_map{
+
+    #button_salir_map {
         position: absolute;
         top: 0px;
         right: 0px;
@@ -947,17 +1018,16 @@ footer{
         border-radius: 10px;
         color: white;
     }
-    #button_salir_map:hover{
+
+    #button_salir_map:hover {
         cursor: pointer;
     }
-    .imgFinal{
-        background-color: var(--cafe4);
+
+    .imgFinal {
+        display: none;
     }
 
-    .frame-video{
-        height: 500px;
-    }
-    .nombre-invitado{
+    .nombre-invitado {
         font-size: 25px;
         text-align: center;
     }
@@ -971,186 +1041,227 @@ footer{
 ######################################################
             MOVIL
 */
-@media screen and (max-width:600px){
-    .banner{
+@media screen and (max-width:600px) {
+    .banner {
         height: 250px;
         padding: 0px;
         margin: 0px;
     }
-    .divBanner{
+
+    .divBanner {
         height: 250px;
     }
-    
-    #logo{
+
+    #logo {
         width: 150px;
     }
-    .mensaje{
+
+    .mensaje {
         font-size: 30px;
     }
-    .mapa{
+
+    .mapa {
         display: block;
         width: 95%;
         height: 500px;
     }
 
-    .ver-mapa{
+    .ver-mapa {
         width: auto;
         padding: 5px;
         color: var(--cafe1);
         background-color: transparent;
     }
-    .ver-mapa:hover{
+
+    .ver-mapa:hover {
         color: white;
     }
-    .caja_datos{
+
+    .caja_datos {
         padding: 20px;
     }
-    .caja1{
+
+    .caja1 {
         height: auto;
     }
-    .caja2{
-        width: 95%; 
+
+    .caja2 {
+        width: 95%;
         height: auto;
         top: -40px;
         display: block;
         position: relative;
     }
-    .caja3{
+
+    .caja3 {
         height: auto;
 
     }
-    .fecha{
+
+    .fecha {
         font-size: 35px;
     }
-    .fondo-left-box{
+
+    .fondo-left-box {
         height: 150px;
     }
-    .fondo-right-box{
+
+    .fondo-right-box {
         height: 150px;
         overflow: hidden;
     }
-    .capsula_top{
+
+    .capsula_top {
         padding: 70px 0px 20px;
-  
+
     }
-    .imagenCapsula{
-        width:  300%;
+
+    .imagenCapsula {
+        width: 300%;
         left: -100%;
     }
-    .left-box{
+
+    .left-box {
         height: 150px;
     }
-    
-    #img_anillos{
+
+    #img_anillos {
         height: 150px;
     }
-    .mapContainer{
+
+    .mapContainer {
         margin-top: 60px;
     }
-    .capsula_bottom{
+
+    .capsula_bottom {
         padding: 10px 40px 40px;
         font-family: fontNunitoRegular;
-        
-    }   
-    .cuadros_fecha{
+
+    }
+
+    .cuadros_fecha {
         font-size: 80px;
     }
-    .capsulaContainerTop{
+
+    .capsulaContainerTop {
         height: 400px
     }
-    .capsulaContainerBottom{
+
+    .capsulaContainerBottom {
         height: 400px;
     }
-    .containerCajas{
+
+    .containerCajas {
         width: 100%;
         background-color: var(--rosita);
     }
-    #aventura1{
+
+    #aventura1 {
         font-size: 20px;
         font-family: fontBodaBold;
     }
-    #aventura2{
+
+    #aventura2 {
         font-size: 20px;
         font-family: fontBodaBold;
     }
-    .imgSubitulo{
+
+    .imgSubitulo {
         width: 100%;
 
     }
-    .imgSubitulo img{
+
+    .imgSubitulo img {
         width: 100%;
         margin: 0 auto;
     }
-    .titulo{
+
+    .titulo {
         font-size: 50px;
     }
 
-    .tiendas-container{
+    .tiendas-container {
         display: flex;
         flex-direction: column;
     }
-    .etapa-itinerario{
+
+    .etapa-itinerario {
         width: 80%;
     }
+
     .etapa-itinerario div img {
         width: 50px;
     }
 
-    .etapas-container{
+    .etapas-container {
         flex-direction: column;
         align-items: center;
         gap: 50px;
     }
-    .descripcion-etapa{
+
+    .descripcion-etapa {
         width: 100%;
         margin: 0 auto;
         font-weight: bold;
         font-size: 20px;
     }
-    .titulo-etapa{
+
+    .titulo-etapa {
         font-size: 30px;
     }
-    .tiendas{
+
+    .tiendas {
         font-size: 40px;
         margin-bottom: 30px;
     }
-    .form-invitados{
+
+    .form-invitados {
         width: 95%;
         padding: 10px;
     }
-    .contenedor-form{
+
+    .contenedor-form {
         grid-template-columns: 4fr 1fr;
     }
-    .nombre-invitado{
-        font-size: 20px;
-    }
-    .texto-confirmanos{
+
+    .nombre-invitado {
         font-size: 30px;
     }
-    
-    .checkbox-confirmar{
+
+    .texto-confirmanos {
+        font-size: 30px;
+    }
+
+    .checkbox-confirmar {
         margin: 0 auto;
     }
-    .container-form{
-        height: 1100px;
+
+    .container-form {
+
+        padding: 10px;
+        width: 100%;
     }
-    .texto_footer{
+
+    .texto_footer {
         font-family: fontBodaBold;
         font-size: 30px;
         color: var(--rosita);
     }
-    .imagenSobre{
+
+    .imagenSobre {
         width: 100px;
     }
-    .bodify{
+
+    .bodify {
         display: flex;
         justify-content: flex-end;
         color: var(--rosita);
         font-size: 10px;
     }
-    .nombre-invitado{
+
+    .nombre-invitado {
         font-size: 25px;
         text-align: center;
     }
-    
+
 }
