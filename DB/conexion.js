@@ -1,6 +1,6 @@
 import { Sequelize, UUID } from 'sequelize';
 
-let resetTablas = true;
+let resetTablas = false;
 
 const sequelize = new Sequelize('bodas', 'postgres', 'teamoRomina1000', {
     host: 'bodify.cg7oal3ge1dk.us-east-1.rds.amazonaws.com',
