@@ -14,7 +14,6 @@
     let container_form = document.getElementsByClassName('container-form');
 
 
-
     // console.log(window.location.href)
     let refId = window.location.pathname.replace('/paolayeduardo/', '');
     try {

@@ -38,29 +38,36 @@ router.get('/paolayeduardo/:token', async (req, res) => {
 router.post('/paolayeduardo/:token', async (req, res) => {
 
     // convertir keys a array
-    const arreglo = Object.keys(req.body).map((clave) => {
-        return Number(clave);
-    });
-    // const listaGrupo = await Invitado.findAll({ where: {grupo: invitado.grupo}})
+    try {
+        const arreglo = Object.keys(req.body).map((clave) => {
+            return Number(clave);
+        });
 
 
-    // revisar el grupo con ese id
-    const result = await Invitado.findAll({ where: { grupo: req.params.id } })
-    if (result) {
-        result.forEach((invitado) => {
-            if (arreglo.includes(invitado.id)) {
-                invitado.confirmado = true;
-                invitado.save();
-            } else {
-                invitado.confirmado = false;
-                invitado.save();
-            }
-        })
+        const invitado = await Invitado.findOne({ where: { tokenInvitado: req.params.token } });
+        const listaGrupo = await Invitado.findAll({ where: { grupo: invitado.grupo } })
 
+
+
+        if (listaGrupo) {
+            listaGrupo.forEach((invitado) => {
+                if (arreglo.includes(invitado.id)) {
+                    invitado.confirmado = true;
+                    invitado.save();
+                } else {
+                    invitado.confirmado = false;
+                    invitado.save();
+                }
+            })
+
+        }
+    } catch (error) {
+        console.log(error);
+        return res.status(404).end();
     }
 
 
-    res.status(200).end('<h1 style="text-align: center; margin-top: 50px;"> Hemos confirmado sus datos Exitosamente, Gracias.</h1>')
+    return res.status(200).end('<h1 style="text-align: center; margin-top: 50px;"> Hemos confirmado sus datos Exitosamente, Gracias.</h1>')
 
 
     // establecer un nuevo objeto con los confirmados
