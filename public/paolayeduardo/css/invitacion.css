@@ -621,10 +621,20 @@ body {
 }
 
 .titulo-mesa-ragalos {
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     font-family: fontNunitoRegular;
-    color: var(--letras);
+
+    margin-top: 30px;
+}
+
+.limite {
+    color: rgb(241, 69, 17);
+    text-align: center;
+    margin: 20px;
+    font-family: fontNunitoRegular;
+    text-shadow: 1px 1px 3px black;
+    word-wrap: wrap;
 }
 
 .borde_abajo_mesa_regalos div {
@@ -659,19 +669,23 @@ body {
 
 .container-final {
     position: relative;
-    height: 1500px;
+    height: 100%;
+    background-color: var(--rosita);
+    padding-top: 30px;
 }
+
 
 .container-final div img {
     width: 100%;
+
 }
 
 .container-form {
-    position: absolute;
     width: 70%;
-    height: auto;
+    height: 100%;
     bottom: 0px;
     background-color: var(--cafe2);
+    padding-top: 50px;
     z-index: 2;
     left: 0;
     right: 0;
@@ -744,6 +758,8 @@ body {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 0px 10px gray;
+    font-weight: bold;
+    margin-top: 30px;
 }
 
 .boton:hover {
@@ -926,8 +942,7 @@ footer {
     }
 
     .container-form {
-        position: relative;
-        width: 80%;
+        width: 100%;
         height: 100%;
     }
 
@@ -1237,8 +1252,6 @@ footer {
     }
 
     .container-form {
-
-        padding: 10px;
         width: 100%;
     }
 

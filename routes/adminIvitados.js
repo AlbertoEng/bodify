@@ -82,14 +82,24 @@ routerAdmin.post('/lista-invitados/agregarNuevo', async (req, res) => {
 })
 
 routerAdmin.delete('/lista-invitados/eliminar/:id', async (req, res) => {
-    const result = await Invitado.destroy({ where: req.params })
-    res.status(200).json(result);
+    try {
+        const result = await Invitado.destroy({ where: req.params })
+        res.status(200).json(result);
+    } catch (error) {
+        console.log(error);
+    }
 })
 
-routerAdmin.get('/lista-invitados/obtenerInvitadosByGrupo/:grupo', async (req, res) => {
-    console.log(req.params.grupo)
-    const result = await Invitado.findAll({ where: { grupo: req.params.grupo } })
-    res.status(200).json(result);
+routerAdmin.get('/lista-invitados/obtenerInvitadosByGrupo/:token', async (req, res) => {
+    try {
+        console.log(req.params.token)
+        const invitado = await Invitado.findOne({ where: { tokenInvitado: req.params.token } })
+
+        const lista = await Invitado.findAll({ where: { grupo: invitado.grupo } });
+        res.status(200).json(lista);
+    } catch (error) {
+        console.log(error);
+    }
 })
 
 

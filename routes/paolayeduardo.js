@@ -22,19 +22,26 @@ import { Invitado } from '../models/Invitado.js'
 
 // })
 
-router.get('/paolayeduardo/:id', async (req, res) => {
+router.get('/paolayeduardo/:token', async (req, res) => {
 
-    res.sendFile(path.resolve('public/paolayeduardo/html/invitacion.html'));
+    // revisar que el token exista en DB
+    try {
+        const invitado = await Invitado.findOne({ where: { tokenInvitado: req.params.token } });
+        res.sendFile(path.resolve('public/paolayeduardo/html/invitacion.html'));
 
+    } catch (error) {
+        console.log('Recurso no encontrado');
+    }
 
 })
 
-router.post('/paolayeduardo/:id', async (req, res) => {
+router.post('/paolayeduardo/:token', async (req, res) => {
 
     // convertir keys a array
     const arreglo = Object.keys(req.body).map((clave) => {
         return Number(clave);
     });
+    // const listaGrupo = await Invitado.findAll({ where: {grupo: invitado.grupo}})
 
 
     // revisar el grupo con ese id
