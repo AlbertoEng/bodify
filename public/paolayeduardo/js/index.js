@@ -18,13 +18,28 @@
 
 
     //2022, 10, 19
+    let fechaLimite = new Date(2022, 9, 20, 23, 59, 59, 00);
+
+    // test
+    let test = new Date(2022, 9, 10, 21, 28, 30, 00);
+
+    let tiempoRestante;
+    let tiempoLimiteConfirmar;
+
     setInterval(() => {
         let fechaActual = new Date();
         let fechaBoda = new Date(2022, 10, 19, 18, 00, 00, 00);
-        if (fechaActual.toString() === fechaBoda.toString()) fechaLimiteConfirmacion = true;
-
         let duration = moment.duration(fechaBoda - fechaActual);
-        let tiempoRestante = fechaBoda - fechaActual;
+        tiempoRestante = fechaBoda - fechaActual;
+        tiempoLimiteConfirmar = fechaLimite -fechaActual;
+
+
+        if(tiempoLimiteConfirmar < 0){
+            fechaLimiteConfirmacion = true
+            container_form[0].style.display = 'none'
+            console.log('listo ok')
+        }
+
         let segRestantes = Math.floor(tiempoRestante / 1000);
         let dias = Math.floor(segRestantes / 86400);
         let horas = Math.floor((segRestantes - dias * 86400) / 3600);
@@ -39,7 +54,9 @@
 
 
     // console.log(window.location.href)
+
     if (!fechaLimiteConfirmacion) {
+        console.log('pase aqui')
         let refId = window.location.pathname.replace('/paolayeduardo/', '');
         try {
             const lista = await axios.get(`http://www.goweddings.net/admin/lista-invitados/obtenerInvitadosByGrupo/${refId}`);
@@ -60,9 +77,7 @@
         } catch (error) {
             console.log(error);
         }
-    } else {
-        contenedor_form[0].innerHTML = '<p style="text-align: center; font-size: 30px; font-weight: bold;">Se Ha Agotado la fecha limite para confirmar</p>'
-    }
+    } 
 
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiYWxiZXJ0b2VuZzA4IiwiYSI6ImNrNmVsZTU1aDF5cjMzZnFqMjR4YTVmOWMifQ.InAhlSX15h0QQI-ZBguwLg';
