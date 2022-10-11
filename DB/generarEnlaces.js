@@ -10,8 +10,19 @@ let dataInvitados = ''
 
 const invitados = await Invitado.findAll({ where: {} });
 
+invitados.sort(function (a, b) {
+    if (a.id > b.id) {
+        return 1;
+    }
+    if (a.id < b.id) {
+        return -1;
+    }
+    // a must be equal to b
+    return 0;
+});
+
 invitados.forEach((invitado) => {
-    dataInvitados += `${invitado.nombre};${baseLink}${invitado.tokenInvitado},\n`;
+    dataInvitados += `${invitado.grupo};${invitado.nombre};${baseLink}${invitado.tokenInvitado},\n`;
 })
 
 
