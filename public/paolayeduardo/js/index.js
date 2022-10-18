@@ -59,7 +59,7 @@
         console.log('pase aqui')
         let refId = window.location.pathname.replace('/paolayeduardo/', '');
         try {
-            const lista = await axios.get(`http://www.goweddings.net/admin/lista-invitados/obtenerInvitadosByGrupo/${refId}`);
+            const lista = await axios.get(`http://localhost:3000/admin/lista-invitados/obtenerInvitadosByGrupo/${refId}`);
             let htmlInvitados = ''
             lista.data.map((invitado) => {
                 htmlInvitados += `<div class="contenedor-form">
