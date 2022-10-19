@@ -1,4 +1,6 @@
 import express from 'express';
+import https from 'https'
+import fs from 'fs';
 import path from 'path';
 import cors from 'cors';
 import {router} from './routes/paolayeduardo.js'
@@ -34,7 +36,17 @@ app.use('/admin', routerAdmin);
 app.use('/auth', routerAuth)
 
 
-
-app.listen(3001, ()=>{
+https.createServer({
+    cert: fs.readFileSync('fullchain.pem'),
+    key: fs.readFileSync('privkey.pem')
+}, app).listen(3001, ()=>{
     console.log('server corriendo')
 })
+
+
+/* 
+Successfully received certificate.
+Certificate is saved at:    /etc/letsencrypt/live/www.goweddings.net/fullchain.pem
+Key is saved at:            /etc/letsencrypt/live/www.goweddings.net/privkey.pem 
+
+*/
