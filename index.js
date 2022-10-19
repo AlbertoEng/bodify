@@ -37,7 +37,7 @@ app.use('/auth', routerAuth)
 
 
 https.createServer({
-    cert: fs.readFileSync('fullchain.pem'),
+    cert: fs.readFileSync('cert.pem'),
     key: fs.readFileSync('privkey.pem')
 }, app).listen(3001, ()=>{
     console.log('server corriendo')
