@@ -30,17 +30,9 @@ app.get('/', (req, res)=>{
     res.send('<h1>Aplicacion de Invitaciones de Bodas</h1>')
 })
 
-
-
 app.use('/admin', routerAdmin);
 app.use('/auth', routerAuth)
 
-
-app.use((req,res,next)=>{
-    res.status(404);
-    res.end('404');
-    return;
-})
 
 
 app.listen(3001, ()=>{
