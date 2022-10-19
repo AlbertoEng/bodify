@@ -36,8 +36,8 @@ app.use('/admin', routerAdmin);
 app.use('/auth', routerAuth)
 
 https.createServer({
-    cert: fs.readFileSync('fullchain.pem', 'utf-8'),
-    key: fs.readFileSync('privkey.pem', 'utf-8')
+    cert: fs.readFileSync('/etc/letsencrypt/live/www.goweddings.net-0001/fullchain.pem', 'utf-8'),
+    key: fs.readFileSync('/etc/letsencrypt/live/www.goweddings.net-0001/privkey.pem', 'utf-8')
 }, app).listen(3001, ()=>{
     console.log('server corriendo')
 })
