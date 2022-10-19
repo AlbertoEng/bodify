@@ -35,7 +35,6 @@ app.get('/', (req, res)=>{
 app.use('/admin', routerAdmin);
 app.use('/auth', routerAuth)
 
-
 https.createServer({
     cert: fs.readFileSync('fullchain.pem', 'utf-8'),
     key: fs.readFileSync('privkey.pem', 'utf-8')
