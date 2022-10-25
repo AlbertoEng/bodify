@@ -34,7 +34,7 @@ app.get('/', (req, res)=>{
 app.use('/admin', routerAdmin);
 app.use('/auth', routerAuth)
 
-app.listen(80, ()=>{
+app.listen(3001, ()=>{
     console.log('server corriendo')
 })
 
