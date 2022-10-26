@@ -33,18 +33,16 @@
         tiempoRestante = fechaBoda - fechaActual;
         tiempoLimiteConfirmar = fechaLimite -fechaActual;
 
-
-        if(tiempoLimiteConfirmar < 0){
-            fechaLimiteConfirmacion = true
-            container_form[0].style.display = 'none'
-            console.log('listo ok')
-        }
-
         let segRestantes = Math.floor(tiempoRestante / 1000);
         let dias = Math.floor(segRestantes / 86400);
         let horas = Math.floor((segRestantes - dias * 86400) / 3600);
         let minutos = Math.floor((segRestantes - dias * 86400 - horas * 3600) / 60);
         let segundos = Math.floor(segRestantes - dias * 86400 - horas * 3600 - minutos * 60);
+
+        // if(tiempoLimiteConfirmar < 0){
+        //     fechaLimiteConfirmacion = true
+        //     container_form[0].style.display = 'none'
+        // }   
 
         dias_restantes.innerHTML = dias + '<span>DIAS</span>';
         horas_restantes.innerHTML = horas + '<span>HORAS</span>';
@@ -55,7 +53,7 @@
 
     // console.log(window.location.href)
 
-    if (!fechaLimiteConfirmacion) {
+    if (fechaLimiteConfirmacion) {
         console.log('pase aqui')
         let refId = window.location.pathname.replace('/paolayeduardo/', '');
         try {
