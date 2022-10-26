@@ -1,10 +1,11 @@
+import QRCode from 'qrcode'
 import { Invitado } from "../models/Invitado.js";
 import fs from 'fs';
 import path from "path";
 import { sequelize, conectarDB } from "./conexion.js";
 
 
-let baseLink = 'http://www.goweddings.net/paolayeduardo/'
+let baseLink = 'https://www.goweddings.net/paolayeduardo/'
 
 let dataInvitados = ''
 
@@ -21,8 +22,10 @@ invitados.sort(function (a, b) {
     return 0;
 });
 
-invitados.forEach((invitado) => {
+invitados.forEach( async (invitado) => {
     dataInvitados += `${invitado.grupo};${invitado.nombre};${baseLink}${invitado.tokenInvitado},\n`;
+    // With async/await
+    await QRCode.toFile(`./DB/QRcodes/${invitado.nombre.trimStart().trimEnd()}_${invitado.id}.png`, invitado.nombre );
 })
 
 

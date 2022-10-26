@@ -44,6 +44,14 @@ routerAdmin.get('/lista-invitados', async (req, res) => {
     // console.log(nuevoInvitado)
 
 })
+routerAdmin.get('/lista-confirmados', async (req, res) => {
+    console.log('epa')
+    const listaInvitados = await Invitado.findAll({ where: { confirmado: true }});
+    const respuesta = listaInvitados ?? [];
+    
+    return res.status(200).json(respuesta)
+
+})
 
 routerAdmin.put('/lista-invitados/grupo/:id', async (req, res) => {
     const result = await Invitado.update({ grupo: req.body.grupo }, {
